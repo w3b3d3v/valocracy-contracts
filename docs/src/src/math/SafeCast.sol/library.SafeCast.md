@@ -1,4 +1,6 @@
 # SafeCast
+[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/4dd7e8efca2b95983b263ee58c9706887af43545/src/math/SafeCast.sol)
+
 *Wrappers over Solidity's uintXX/intXX casting operators with added overflow
 checks.
 Downcasting from uint256/int256 in Solidity does not revert on overflow. This can

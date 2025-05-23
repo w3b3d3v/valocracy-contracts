@@ -1,4 +1,6 @@
 # Treasury
+[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/4dd7e8efca2b95983b263ee58c9706887af43545/src/Treasury.sol)
+
 **Inherits:**
 ERC20, [ITreasury](/src/interfaces/ITreasury.sol/interface.ITreasury.md)
 
