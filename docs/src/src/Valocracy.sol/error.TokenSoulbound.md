@@ -1,0 +1,6 @@
+# TokenSoulbound
+
+```solidity
+error TokenSoulbound();
+```
+

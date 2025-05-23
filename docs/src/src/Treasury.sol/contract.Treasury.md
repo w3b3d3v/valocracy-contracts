@@ -1,0 +1,81 @@
+# Treasury
+**Inherits:**
+ERC20, [ITreasury](/src/interfaces/ITreasury.sol/interface.ITreasury.md)
+
+
+## State Variables
+### _asset
+*The underlying token used for the Vault.*
+
+
+```solidity
+IERC20 private immutable _asset;
+```
+
+
+### _valocracy
+*The Valocracy contract.*
+
+
+```solidity
+address private _valocracy;
+```
+
+
+## Functions
+### constructor
+
+*Initializes the contract by setting a `name` and a `symbol`
+for the fungible token. Also sets the Valocracy contract and the
+underlying asset token.*
+
+
+```solidity
+constructor(IERC20 asset_, address valocracy, string memory name, string memory symbol) ERC20(name, symbol);
+```
+
+### asset
+
+*See [IERC4626-asset](/src/interfaces/ITreasury.sol/interface.ITreasury.md#asset).*
+
+
+```solidity
+function asset() public view virtual returns (address);
+```
+
+### totalAssets
+
+*See [IERC4626-totalAssets](/src/interfaces/ITreasury.sol/interface.ITreasury.md#totalassets).*
+
+
+```solidity
+function totalAssets() public view virtual returns (uint256);
+```
+
+### previewWithdraw
+
+*See [IERC4626-previewWithdraw](/src/interfaces/ITreasury.sol/interface.ITreasury.md#previewwithdraw).*
+
+
+```solidity
+function previewWithdraw(uint256 shares) public view virtual returns (uint256);
+```
+
+### deposit
+
+*See [IERC4626-deposit](/src/interfaces/ITreasury.sol/interface.ITreasury.md#deposit).*
+
+
+```solidity
+function deposit(address receiver, uint256 shares) public;
+```
+
+### withdraw
+
+*See [IERC4626-withdraw](/src/interfaces/ITreasury.sol/interface.ITreasury.md#withdraw).*
+
+
+```solidity
+function withdraw(address receiver, uint256 shares) public;
+```
+

@@ -1,0 +1,17 @@
+# Summary
+- [Home](README.md)
+# src
+  - [❱ interfaces](src/interfaces/README.md)
+    - [IIDNFT](src/interfaces/IIDNFT.sol/interface.IIDNFT.md)
+    - [ITreasury](src/interfaces/ITreasury.sol/interface.ITreasury.md)
+    - [IValocracy](src/interfaces/IValocracy.sol/interface.IValocracy.md)
+  - [❱ math](src/math/README.md)
+    - [ERC7725](src/math/ERC7725.sol/abstract.ERC7725.md)
+    - [IERC7725](src/math/IERC7725.sol/interface.IERC7725.md)
+    - [SafeCast](src/math/SafeCast.sol/library.SafeCast.md)
+  - [❱ mocks](src/mocks/README.md)
+    - [MockERC20](src/mocks/MockERC20.sol/contract.MockERC20.md)
+  - [IDNFT](src/IDNFT.sol/abstract.IDNFT.md)
+  - [Treasury](src/Treasury.sol/contract.Treasury.md)
+  - [TokenSoulbound](src/Valocracy.sol/error.TokenSoulbound.md)
+  - [Valocracy](src/Valocracy.sol/contract.Valocracy.md)
