@@ -15,3 +15,6 @@
   - [Treasury](src/Treasury.sol/contract.Treasury.md)
   - [TokenSoulbound](src/Valocracy.sol/error.TokenSoulbound.md)
   - [Valocracy](src/Valocracy.sol/contract.Valocracy.md)
+  - [❱ Testing](testing/README.md)
+    - [Treasury Test Coverage](testing/TreasuryTestCoverage.md)
+    - [Treasury Test Scenarios](testing/TreasuryTestScenarios.md)

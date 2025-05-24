@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IIDNFT.sol/interface.IIDNFT.html">IIDNFT</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="src/math/index.html">❱ math</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/math/ERC7725.sol/abstract.ERC7725.html">ERC7725</a></li><li class="chapter-item "><a href="src/math/IERC7725.sol/interface.IERC7725.html">IERC7725</a></li><li class="chapter-item "><a href="src/math/SafeCast.sol/library.SafeCast.html">SafeCast</a></li></ol></li><li class="chapter-item "><a href="src/mocks/index.html">❱ mocks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/mocks/MockERC20.sol/contract.MockERC20.html">MockERC20</a></li></ol></li><li class="chapter-item "><a href="src/IDNFT.sol/abstract.IDNFT.html">IDNFT</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/error.TokenSoulbound.html">TokenSoulbound</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IIDNFT.sol/interface.IIDNFT.html">IIDNFT</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="src/math/index.html">❱ math</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/math/ERC7725.sol/abstract.ERC7725.html">ERC7725</a></li><li class="chapter-item "><a href="src/math/IERC7725.sol/interface.IERC7725.html">IERC7725</a></li><li class="chapter-item "><a href="src/math/SafeCast.sol/library.SafeCast.html">SafeCast</a></li></ol></li><li class="chapter-item "><a href="src/mocks/index.html">❱ mocks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/mocks/MockERC20.sol/contract.MockERC20.html">MockERC20</a></li></ol></li><li class="chapter-item "><a href="src/IDNFT.sol/abstract.IDNFT.html">IDNFT</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/error.TokenSoulbound.html">TokenSoulbound</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item "><a href="testing/index.html">❱ Testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -1408,6 +1408,305 @@ Ownable, <a href="src/Valocracy.sol//src/IDNFT.sol/abstract.IDNFT.html">IDNFT</a
 <p><em>See <a href="src/Valocracy.sol//lib/forge-std/src/interfaces/IERC6909.sol/interface.IERC6909ContentURI.html#tokenuri">IERC721Metadata-tokenURI</a>.</em></p>
 <pre><code class="language-solidity">function tokenURI(uint256 tokenId) public view returns (string memory);
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="testing-documentation"><a class="header" href="#testing-documentation">Testing Documentation</a></h1>
+<p>This section contains detailed documentation about the test coverage and missing's test scenarios for the Valocracy contracts.</p>
+<h2 id="contents-3"><a class="header" href="#contents-3">Contents</a></h2>
+<ul>
+<li><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a> - Comprehensive overview of test coverage for the Treasury contract</li>
+<li><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a> - Additional test scenarios and recommended test cases</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="valocracy-treasury-test-coverage-report"><a class="header" href="#valocracy-treasury-test-coverage-report">Valocracy Treasury Test Coverage Report</a></h1>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>This document outlines the test coverage for the Valocracy Treasury system implemented as an ERC4626 vault. The tests verify the functionality of asset management, share minting, and withdrawal operations in the Valocracy ecosystem.</p>
+<h2 id="test-environment"><a class="header" href="#test-environment">Test Environment</a></h2>
+<ul>
+<li>Uses Foundry for testing</li>
+<li>Deploys contracts:
+<ul>
+<li>Treasury (ERC4626 vault implementation)</li>
+<li>MockToken (ERC20 implementation for testing)</li>
+<li>Valocracy (main contract)</li>
+</ul>
+</li>
+<li>Uses multiple test accounts:
+<ul>
+<li>DEPLOYER</li>
+<li>VALOCRACY</li>
+<li>USER1</li>
+<li>USER2</li>
+</ul>
+</li>
+</ul>
+<h2 id="test-categories"><a class="header" href="#test-categories">Test Categories</a></h2>
+<h3 id="1-contract-initialization"><a class="header" href="#1-contract-initialization">1. Contract Initialization</a></h3>
+<ul>
+<li>
+<p><strong>Contract Deployment</strong></p>
+<ul>
+<li>Function Calls:
+<ul>
+<li><code>new Treasury(asset_, valocracy, name, symbol)</code></li>
+<li><code>name()</code></li>
+<li><code>symbol()</code></li>
+</ul>
+</li>
+<li>Verifies correct contract initialization</li>
+<li>Validates token name and symbol</li>
+<li>Checks asset and valocracy address assignment</li>
+</ul>
+</li>
+<li>
+<p><strong>Asset Configuration</strong></p>
+<ul>
+<li>Function Calls:
+<ul>
+<li><code>asset()</code></li>
+</ul>
+</li>
+<li>Tests underlying asset assignment</li>
+<li>Verifies asset token address</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-asset-management"><a class="header" href="#2-asset-management">2. Asset Management</a></h3>
+<ul>
+<li><strong>Asset Tracking</strong>
+<ul>
+<li>Function Calls:
+<ul>
+<li><code>totalAssets()</code></li>
+<li><code>previewWithdraw(shares)</code></li>
+</ul>
+</li>
+<li>Tests total assets calculation</li>
+<li>Verifies share-to-asset conversion</li>
+<li>Validates asset balance tracking</li>
+<li>Uses MockToken to simulate real ERC20 assets</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-share-operations"><a class="header" href="#3-share-operations">3. Share Operations</a></h3>
+<ul>
+<li>
+<p><strong>Share Minting</strong></p>
+<ul>
+<li>Function Calls:
+<ul>
+<li><code>deposit(receiver, shares)</code></li>
+</ul>
+</li>
+<li>Tests share minting by Valocracy
+<ul>
+<li>Verifies only Valocracy can mint</li>
+<li>Validates share distribution</li>
+<li>Checks Deposit event emission</li>
+<li>Uses MockToken for asset deposits</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Share Burning</strong></p>
+<ul>
+<li>Function Calls:
+<ul>
+<li><code>withdraw(receiver, shares)</code></li>
+</ul>
+</li>
+<li>Tests share burning and asset withdrawal
+<ul>
+<li>Verifies share burning</li>
+<li>Validates asset transfer</li>
+<li>Checks Withdraw event emission</li>
+<li>Uses MockToken to track asset transfers</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-access-control"><a class="header" href="#4-access-control">4. Access Control</a></h3>
+<ul>
+<li><strong>Authorization Checks</strong>
+<ul>
+<li>Function Calls:
+<ul>
+<li><code>deposit(receiver, shares)</code> (from non-Valocracy address)</li>
+</ul>
+</li>
+<li>Tests deposit authorization</li>
+<li>Verifies NotAuthorized error</li>
+<li>Validates access restrictions</li>
+</ul>
+</li>
+</ul>
+<h2 id="test-implementation-details"><a class="header" href="#test-implementation-details">Test Implementation Details</a></h2>
+<h3 id="mocktoken-usage"><a class="header" href="#mocktoken-usage">MockToken Usage</a></h3>
+<ul>
+<li>Implements ERC20 standard for testing</li>
+<li>Simulates any ERC20 asset that could be managed by the Treasury</li>
+<li>In real scenarios, this could be any ERC20 token like USDC, DAI, etc.</li>
+<li>Provides controlled environment for testing asset management</li>
+</ul>
+<h3 id="test-scenarios"><a class="header" href="#test-scenarios">Test Scenarios</a></h3>
+<h4 id="contract-setup"><a class="header" href="#contract-setup">Contract Setup</a></h4>
+<ul>
+<li>Initialize treasury with correct parameters</li>
+<li>Verify asset and valocracy assignments</li>
+<li>Check token metadata</li>
+</ul>
+<h4 id="asset-management"><a class="header" href="#asset-management">Asset Management</a></h4>
+<ul>
+<li>Track total assets</li>
+<li>Verify share-to-asset conversions</li>
+<li>Test asset balance updates</li>
+<li>Validate MockToken integration</li>
+</ul>
+<h4 id="share-operations"><a class="header" href="#share-operations">Share Operations</a></h4>
+<ul>
+<li>Mint shares through Valocracy</li>
+<li>Burn shares and withdraw assets</li>
+<li>Verify share distribution</li>
+<li>Test share calculations</li>
+<li>Validate asset transfers</li>
+</ul>
+<h4 id="access-control"><a class="header" href="#access-control">Access Control</a></h4>
+<ul>
+<li>Verify Valocracy-only minting</li>
+<li>Test unauthorized deposit attempts</li>
+<li>Validate withdrawal permissions</li>
+</ul>
+<h4 id="event-tracking"><a class="header" href="#event-tracking">Event Tracking</a></h4>
+<ul>
+<li>Monitor Deposit events</li>
+<li>Monitor Withdraw events</li>
+<li>Verify event parameters</li>
+<li>Test event emission</li>
+</ul>
+<h2 id="test-coverage-status"><a class="header" href="#test-coverage-status">Test Coverage Status</a></h2>
+<p>The current test suite provides comprehensive coverage for:</p>
+<ol>
+<li>✅ Contract initialization and configuration</li>
+<li>✅ Asset tracking and balance management</li>
+<li>✅ Share minting and burning operations</li>
+<li>✅ Asset withdrawal and transfer</li>
+<li>✅ Access control and permissions</li>
+<li>✅ Event emission and tracking</li>
+<li>✅ Share-to-asset conversion calculations</li>
+</ol>
+<h2 id="future-considerations"><a class="header" href="#future-considerations">Future Considerations</a></h2>
+<p>The following aspects could be considered for future test coverage:</p>
+<ol>
+<li>Share price calculations</li>
+<li>Fee management</li>
+<li>Emergency pause functionality</li>
+<li>Asset strategy implementation</li>
+<li>Treasury manager role</li>
+<li>Additional access control features</li>
+<li>Advanced withdrawal strategies</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="additional-test-scenarios"><a class="header" href="#additional-test-scenarios">Additional Test Scenarios</a></h2>
+<h3 id="asset-transfer-scenarios"><a class="header" href="#asset-transfer-scenarios">Asset Transfer Scenarios</a></h3>
+<ul>
+<li>
+<p>Direct asset transfers to Treasury</p>
+<ul>
+<li>Test behavior when assets are sent directly to Treasury without deposit</li>
+<li>Verify share representation remains accurate</li>
+<li>Check totalAssets() calculation after direct transfers</li>
+<li>Validate share price impact from unexpected asset inflows</li>
+</ul>
+</li>
+<li>
+<p>External asset movements</p>
+<ul>
+<li>Test Treasury's behavior when assets are moved externally</li>
+<li>Verify share-to-asset ratio remains consistent</li>
+<li>Check handling of unexpected asset outflows</li>
+<li>Validate totalAssets() accuracy after external movements</li>
+</ul>
+</li>
+</ul>
+<h3 id="recommended-test-cases"><a class="header" href="#recommended-test-cases">Recommended Test Cases</a></h3>
+<ol>
+<li>
+<p><strong>Asset Ratio Tests</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Test share-to-asset ratio consistency</li>
+<li><input disabled="" type="checkbox"/>
+Verify ratio calculations after multiple deposits</li>
+<li><input disabled="" type="checkbox"/>
+Check ratio accuracy after withdrawals</li>
+<li><input disabled="" type="checkbox"/>
+Validate ratio maintenance during external transfers</li>
+</ul>
+</li>
+<li>
+<p><strong>Edge Cases</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Test with maximum uint256 values</li>
+<li><input disabled="" type="checkbox"/>
+Verify behavior with zero amount deposits</li>
+<li><input disabled="" type="checkbox"/>
+Check handling of dust amounts</li>
+<li><input disabled="" type="checkbox"/>
+Test with different decimal places in asset token</li>
+</ul>
+</li>
+<li>
+<p><strong>Multiple User Scenarios</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Test concurrent deposits from multiple users</li>
+<li><input disabled="" type="checkbox"/>
+Verify share distribution accuracy</li>
+<li><input disabled="" type="checkbox"/>
+Check withdrawal queue handling</li>
+<li><input disabled="" type="checkbox"/>
+Test multiple simultaneous withdrawals</li>
+</ul>
+</li>
+<li>
+<p><strong>Asset Price Impact</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Test share price calculation accuracy</li>
+<li><input disabled="" type="checkbox"/>
+Verify price impact from large deposits</li>
+<li><input disabled="" type="checkbox"/>
+Check price stability during withdrawals</li>
+<li><input disabled="" type="checkbox"/>
+Validate price calculations with varying asset amounts</li>
+</ul>
+</li>
+<li>
+<p><strong>Security Tests</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Test reentrancy protection</li>
+<li><input disabled="" type="checkbox"/>
+Verify access control boundaries</li>
+<li><input disabled="" type="checkbox"/>
+Check overflow/underflow protection</li>
+<li><input disabled="" type="checkbox"/>
+Validate emergency pause functionality</li>
+</ul>
+</li>
+<li>
+<p><strong>Gas Optimization</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Test gas costs for common operations</li>
+<li><input disabled="" type="checkbox"/>
+Verify optimization of batch operations</li>
+<li><input disabled="" type="checkbox"/>
+Check gas efficiency of share calculations</li>
+<li><input disabled="" type="checkbox"/>
+Validate gas costs for different user scenarios</li>
+</ul>
+</li>
+</ol>
 
                     </main>
 
