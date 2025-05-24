@@ -7,6 +7,8 @@ import {IERC20Metadata} from "@openzeppelin/contracts/token/ERC20/extensions/IER
 import {ITreasury} from "./interfaces/ITreasury.sol";
 
 contract Treasury is ERC20, ITreasury {
+
+
     /**
      * @dev The underlying token used for the Vault.
      */
@@ -48,11 +50,21 @@ contract Treasury is ERC20, ITreasury {
 
     /**
      * @dev See {IERC4626-previewWithdraw}.
+     * @dev Calculates the amount of assets that would be returned for burning the given amount of shares.
+     * The calculation is based on the proportion of total assets to total shares.
+     * For example, if there are 2000 assets and 1000 shares, each share represents 2 assets.
      */
     function previewWithdraw(
         uint256 shares
     ) public view virtual returns (uint256) {
-        return (totalAssets() * shares) / totalSupply();
+        uint256 totalAssets_ = totalAssets();
+        uint256 totalSupply_ = totalSupply();
+        
+        // If there are no shares, return 0 to avoid division by zero
+        if (totalSupply_ == 0) return 0;
+        
+        // Calculate assets based on the proportion of total assets to total shares
+        return (totalAssets_ * shares) / totalSupply_;
     }
 
     /**
@@ -62,6 +74,11 @@ contract Treasury is ERC20, ITreasury {
         if (msg.sender != _valocracy) {
             revert NotAuthorized(msg.sender);
         }
+
+        // Transfer assets from valocracy to treasury
+        _asset.transferFrom(msg.sender, address(this), shares);
+        
+        // Mint shares to receiver
         _mint(receiver, shares);
 
         emit Deposit(receiver, shares);
