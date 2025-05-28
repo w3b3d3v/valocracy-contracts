@@ -9,7 +9,13 @@ import {IDNFT} from "./IDNFT.sol";
 
 error TokenSoulbound();
 
-contract Valocracy is Ownable, IDNFT, ERC20Votes {
+contract Valocracy is ERC20Votes, Ownable, IDNFT {
+    /// @dev Number of seconds in a day
+    uint32 private constant SECONDS_PER_DAY = 86400;
+
+    /// @dev Mapping from accounts addresses to their last participation timestamp
+    mapping(address => uint32) private _lastParticipation;
+
     /**
      * @dev Initializes the contract by setting a `name` and a `symbol`.
      */
@@ -18,7 +24,11 @@ contract Valocracy is Ownable, IDNFT, ERC20Votes {
         ERC20Votes()
         Ownable(msg.sender)
         EIP712(name, "1")
-    {}
+    {
+        // Set default periods
+        _setStablePeriod(90 days);
+        _setDecayPeriod(90 days);
+    }
 
     /**
      * @dev See {IERC721Metadata-tokenURI}.
@@ -27,22 +37,71 @@ contract Valocracy is Ownable, IDNFT, ERC20Votes {
         return "a";
     }
 
-    // /**
-    //  * @dev Overriding the {ERC721-_transfer} to make the token
-    //  * soulbounded, making it non-transferable to another account.
-    //  *
-    //  * The account can still burn the token calling {ERC721-burn}
-    //  */
-    // function _transfer(address, address, uint256) internal pure override {
-    //     revert TokenSoulbound();
-    // }
+    /**
+     * @dev Overriding the {ERC20Votes-_update} to make the token
+     * soulbounded, making it non-transferable to another account.
+     * Only allows minting and burning.
+     */
+    function _update(address from, address to, uint256 value) internal virtual override {
+        // Allow minting (from == address(0)) and burning (to == address(0))
+        if (from != address(0) && to != address(0)) {
+            revert TokenSoulbound();
+        }
 
-    // /**
-    //  * @dev Returns the balance of `account`.
-    //  *
-    //  * WARNING: Overriding this function will likely result in incorrect vote tracking.
-    //  */
-    // function _getVotingUnits(address account) internal view override returns (uint256) {
-    //     return levelOf(account);
-    // }
+        super._update(from, to, value);
+    }
+
+    /**
+     * @dev Returns the balance of `account` with decay applied.
+     */
+    function balanceOf(address account) public view override(ERC20, IDNFT) returns (uint256) {
+        uint256 lastParticipation = _lastParticipation[account];
+        uint256 balance = super.balanceOf(account);
+
+
+        // If no voting power was granted or still in stable period, return full balance
+        if (lastParticipation == 0 || block.timestamp < lastParticipation + stablePeriod()) {
+            return balance;
+        }
+
+        // Calculate time passed since stable period ended
+        uint256 timeSinceStablePeriod = block.timestamp - (lastParticipation + stablePeriod());
+
+        // If decay period is over, return 0
+        if (timeSinceStablePeriod >= decayPeriod()) {
+            return 0;
+        }
+
+        // Linear decay: Calculate remaining balance during decay period
+        uint256 decayPercentage = (timeSinceStablePeriod * 1e18) / decayPeriod(); // Percentage in 18 decimals
+        
+        uint256 remainingBalance = (balance * (1e18 - decayPercentage)) / 1e18;
+
+        return remainingBalance;
+    }
+
+    /**
+     * @dev Returns the voting units for an account.
+     */
+    function _getVotingUnits(address account) internal view override returns (uint256) {
+        return balanceOf(account);
+    }
+
+    /**
+     * @dev Grants voting units to the specified account by `amount`. Only the contract owner can
+     * mint new tokens and grant additional voting units.
+     */
+    function grantVotingUnits(address to, uint256 amount) public onlyOwner {
+        _lastParticipation[to] = uint32(block.timestamp);
+        _mint(to, amount);
+    }
+
+    /**
+     * @notice Burns an ERC20 token and reduces the voting units associated with the token holder.
+     */
+    function burn(uint256 amount) public virtual {
+        address from = _msgSender();
+        require(balanceOf(from) >= amount, "Insufficient voting power");
+        _burn(from, amount);
+    }
 }
