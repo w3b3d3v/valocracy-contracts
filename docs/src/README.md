@@ -1,53 +1,38 @@
-**Project Explanation: Valocracy**
+# Valocracy
 
-**Valocracy** is a governance model designed to replace plutocracy with a system that allocates influence based on *contributions and merit* rather than *wealth*. The core concept is that **participants earn influence (voting power)** in proportion to the value they create for the community. Influence is **non-transferable**, ensuring that governance reflects active contribution rather than token accumulation.
+Valocracy is a governance model designed to replace plutocracy with a system that allocates influence based on contributions and merit rather than wealth. The core concept is that participants earn influence (voting power) in proportion to the value they create for the community. Influence is non-transferable, ensuring that governance reflects active contribution rather than token accumulation.
 
-### Key Concepts:
+## Key Concepts
 
-* **Valuation over Capital**: Voting power is tied to reputation or contribution scores, not tokens.
-* **Soulbound Rights**: Influence is non-transferable and earned individually.
-* **Multi-Stakeholder Alignment**: Designed to align the incentives of builders, users, and funders.
-* **Transparent Contribution Records**: Contributions are logged and assessed by peers or through algorithms.
-* **Decentralized Reputation System**: Participants build up their score through verifiable actions.
+- **Valuation over Capital**: Voting power is tied to reputation or contribution scores, not tokens.
+- **Soulbound Rights**: Influence is non-transferable and earned individually.
+- **Multi-Stakeholder Alignment**: Designed to align the incentives of builders, users, and funders.
+- **Transparent Contribution Records**: Contributions are logged and assessed by peers or through algorithms.
+- **Decentralized Reputation System**: Participants build up their score through verifiable actions.
 
-### Architecture Components:
+## Architecture Components
 
-1. **Contributor Registry (Soulbound Identity)**
+### 1. Contributor Registry (Soulbound Identity)
 
-   * Each participant has a non-transferable identity (e.g., NFT or soulbound token).
-   * Used to track all contributions and voting rights.
-   - [ ] Implement ERC20Votes as soulbound token and include NFT Metadata to be compatible with ERC721 Interface.
-   - [ ] Function getVotes() should return the number of votes the holder has.
+- Each participant has a non-transferable identity (e.g., NFT or soulbound token).
+- Used to track all contributions and voting rights.
+- [ ] Implement ERC20Votes as soulbound token and include NFT Metadata to be compatible with ERC721 Interface.
+- [ ] Function getVotes() should return the number of votes the holder has.
 
-2. **Contribution Tracking Module**
+### 2. Contribution Tracking Module
 
-   - [ ] Discuss and define how the mint process will work. Ownable/AcessControl/Gov/Multisig.
-   - [ ] Discuss the best way to track contributions. Considering the new changes to the ERC20Votes instead of cumulative NFTs.
-  - [ ] Shares are minted to the contributor's wallet address when they submit a contribution and get verified or we mint and they can claim it?
+- [ ] Discuss and define how the mint process will work. Ownable/AcessControl/Gov/Multisig.
+- [ ] Discuss the best way to track contributions. Considering the new changes to the ERC20Votes instead of cumulative NFTs.
+- [ ] Shares are minted to the contributor's wallet address when they submit a contribution and get verified or we mint and they can claim it?
 
-3. **Valocracy Voting System**
+### 3. Valocracy Voting System
 
-   * Voting weight = Curve calculation based on decay.
+- Voting weight = Curve calculation based on decay.
 
-4. **Treasury and Share Management**
+### 4. Treasury and Share Management
 
-  * Treasury manages the economic power of the system through shares.
-  * Shares represent proportional ownership of the treasury's assets.
-  * Treasury has one underlying asset.
-  - [ ] Implement share price calculation mechanism
-  - [ ] Create emergency pause functionality
-
-
-# Summary
-- [Home](README.md)
-# src
-  - [IDNFT](src/IDNFT.sol/abstract.IDNFT.md)
-  - [Treasury](src/Treasury.sol/contract.Treasury.md)
-  - [Valocracy](src/Valocracy.sol/contract.Valocracy.md)
-  - [❱ Testing](testing/README.md)
-    - [Treasury Test Coverage](testing/TreasuryTestCoverage.md)
-    - [Treasury Test Scenarios](testing/TreasuryTestScenarios.md)
-  - [❱ interfaces](src/interfaces/README.md)
-    - [IIDNFT](src/interfaces/IIDNFT.sol/interface.IIDNFT.md)
-    - [ITreasury](src/interfaces/ITreasury.sol/interface.ITreasury.md)
-    - [IValocracy](src/interfaces/IValocracy.sol/interface.IValocracy.md)
+- Treasury manages the economic power of the system through shares.
+- Shares represent proportional ownership of the treasury's assets.
+- Treasury has one underlying asset.
+- [ ] Implement share price calculation mechanism
+- [ ] Create emergency pause functionality

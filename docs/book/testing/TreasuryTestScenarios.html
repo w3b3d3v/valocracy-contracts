@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="../index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="../src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../src/interfaces/IIDNFT.sol/interface.IIDNFT.html">IIDNFT</a></li><li class="chapter-item "><a href="../src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="../src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="../src/math/index.html">❱ math</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../src/math/ERC7725.sol/abstract.ERC7725.html">ERC7725</a></li><li class="chapter-item "><a href="../src/math/IERC7725.sol/interface.IERC7725.html">IERC7725</a></li><li class="chapter-item "><a href="../src/math/SafeCast.sol/library.SafeCast.html">SafeCast</a></li></ol></li><li class="chapter-item "><a href="../src/mocks/index.html">❱ mocks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../src/mocks/MockERC20.sol/contract.MockERC20.html">MockERC20</a></li></ol></li><li class="chapter-item "><a href="../src/IDNFT.sol/abstract.IDNFT.html">IDNFT</a></li><li class="chapter-item "><a href="../src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="../src/Valocracy.sol/error.TokenSoulbound.html">TokenSoulbound</a></li><li class="chapter-item "><a href="../src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item expanded "><a href="../testing/index.html">❱ Testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item expanded "><a href="../testing/TreasuryTestScenarios.html" class="active">Treasury Test Scenarios</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="../index.html">Home</a></li><li class="chapter-item "><a href="../src/IDNFT.sol/abstract.IDNFT.html">IDNFT</a></li><li class="chapter-item "><a href="../src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="../src/interfaces/IIDNFT.sol/interface.IIDNFT.html">IIDNFT</a></li><li class="chapter-item "><a href="../src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="../testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item expanded "><a href="../testing/TreasuryTestScenarios.html" class="active">Treasury Test Scenarios</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -180,28 +180,6 @@
                 <div id="content" class="content">
                     <main>
                         <h2 id="additional-test-scenarios"><a class="header" href="#additional-test-scenarios">Additional Test Scenarios</a></h2>
-<h3 id="asset-transfer-scenarios"><a class="header" href="#asset-transfer-scenarios">Asset Transfer Scenarios</a></h3>
-<ul>
-<li>
-<p>Direct asset transfers to Treasury</p>
-<ul>
-<li>Test behavior when assets are sent directly to Treasury without deposit</li>
-<li>Verify share representation remains accurate</li>
-<li>Check totalAssets() calculation after direct transfers</li>
-<li>Validate share price impact from unexpected asset inflows</li>
-</ul>
-</li>
-<li>
-<p>External asset movements</p>
-<ul>
-<li>Test Treasury's behavior when assets are moved externally</li>
-<li>Verify share-to-asset ratio remains consistent</li>
-<li>Check handling of unexpected asset outflows</li>
-<li>Validate totalAssets() accuracy after external movements</li>
-</ul>
-</li>
-</ul>
-<h3 id="recommended-test-cases"><a class="header" href="#recommended-test-cases">Recommended Test Cases</a></h3>
 <ol>
 <li>
 <p><strong>Asset Ratio Tests</strong></p>
@@ -269,16 +247,48 @@ Validate emergency pause functionality</li>
 </ul>
 </li>
 <li>
-<p><strong>Gas Optimization</strong></p>
+<p><strong>Fee Management Tests</strong></p>
 <ul>
 <li><input disabled="" type="checkbox"/>
-Test gas costs for common operations</li>
+Test fee calculation accuracy</li>
 <li><input disabled="" type="checkbox"/>
-Verify optimization of batch operations</li>
+Verify fee collection mechanisms</li>
 <li><input disabled="" type="checkbox"/>
-Check gas efficiency of share calculations</li>
+Check fee distribution to stakeholders</li>
 <li><input disabled="" type="checkbox"/>
-Validate gas costs for different user scenarios</li>
+Validate fee adjustments and updates</li>
+<li><input disabled="" type="checkbox"/>
+Test different fee types and their interactions</li>
+</ul>
+</li>
+<li>
+<p><strong>Asset Strategy Tests</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Test different asset allocation strategies</li>
+<li><input disabled="" type="checkbox"/>
+Verify strategy execution and performance</li>
+<li><input disabled="" type="checkbox"/>
+Check strategy rebalancing mechanisms</li>
+<li><input disabled="" type="checkbox"/>
+Validate strategy risk management</li>
+<li><input disabled="" type="checkbox"/>
+Test strategy adaptation to market conditions</li>
+</ul>
+</li>
+<li>
+<p><strong>Treasury Manager Tests</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Test manager permission boundaries</li>
+<li><input disabled="" type="checkbox"/>
+Verify manager action validations</li>
+<li><input disabled="" type="checkbox"/>
+Check manager role limitations</li>
+<li><input disabled="" type="checkbox"/>
+Validate manager decision execution</li>
+<li><input disabled="" type="checkbox"/>
+Test manager accountability mechanisms</li>
 </ul>
 </li>
 </ol>

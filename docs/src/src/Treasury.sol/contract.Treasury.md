@@ -1,5 +1,5 @@
 # Treasury
-[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/4dd7e8efca2b95983b263ee58c9706887af43545/src/Treasury.sol)
+[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/3c1bb3a5dbf1b0852bacbc7957066c674b876a74/src/Treasury.sol)
 
 **Inherits:**
 ERC20, [ITreasury](/src/interfaces/ITreasury.sol/interface.ITreasury.md)
@@ -57,6 +57,10 @@ function totalAssets() public view virtual returns (uint256);
 ### previewWithdraw
 
 *See [IERC4626-previewWithdraw](/src/interfaces/ITreasury.sol/interface.ITreasury.md#previewwithdraw).*
+
+*Calculates the amount of assets that would be returned for burning the given amount of shares.
+The calculation is based on the proportion of total assets to total shares.
+For example, if there are 2000 assets and 1000 shares, each share represents 2 assets.*
 
 
 ```solidity
