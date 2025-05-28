@@ -1,20 +1,5 @@
 ## Additional Test Scenarios
 
-### Asset Transfer Scenarios
-- Direct asset transfers to Treasury
-  - Test behavior when assets are sent directly to Treasury without deposit
-  - Verify share representation remains accurate
-  - Check totalAssets() calculation after direct transfers
-  - Validate share price impact from unexpected asset inflows
-
-- External asset movements
-  - Test Treasury's behavior when assets are moved externally
-  - Verify share-to-asset ratio remains consistent
-  - Check handling of unexpected asset outflows
-  - Validate totalAssets() accuracy after external movements
-
-### Recommended Test Cases
-
 1. **Asset Ratio Tests**
    - [ ] Test share-to-asset ratio consistency
    - [ ] Verify ratio calculations after multiple deposits
@@ -45,8 +30,23 @@
    - [ ] Check overflow/underflow protection
    - [ ] Validate emergency pause functionality
 
-6. **Gas Optimization**
-   - [ ] Test gas costs for common operations
-   - [ ] Verify optimization of batch operations
-   - [ ] Check gas efficiency of share calculations
-   - [ ] Validate gas costs for different user scenarios
+6. **Fee Management Tests**
+   - [ ] Test fee calculation accuracy
+   - [ ] Verify fee collection mechanisms
+   - [ ] Check fee distribution to stakeholders
+   - [ ] Validate fee adjustments and updates
+   - [ ] Test different fee types and their interactions
+
+7. **Asset Strategy Tests**
+   - [ ] Test different asset allocation strategies
+   - [ ] Verify strategy execution and performance
+   - [ ] Check strategy rebalancing mechanisms
+   - [ ] Validate strategy risk management
+   - [ ] Test strategy adaptation to market conditions
+
+8. **Treasury Manager Tests**
+   - [ ] Test manager permission boundaries
+   - [ ] Verify manager action validations
+   - [ ] Check manager role limitations
+   - [ ] Validate manager decision execution
+   - [ ] Test manager accountability mechanisms
