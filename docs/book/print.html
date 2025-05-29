@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="testing/index.html">❱ testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li><li class="chapter-item "><a href="testing/ValocracyTestCoverage.html">Valocracy Test Coverage</a></li><li class="chapter-item "><a href="testing/ValocracyTestScenarios.html">Valocracy Test Scenarios</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item affix "><li class="part-title">testing</li><li class="chapter-item "><a href="testing/index.html">❱ testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li><li class="chapter-item "><a href="testing/ValocracyTestCoverage.html">Valocracy Test Coverage</a></li><li class="chapter-item "><a href="testing/ValocracyTestScenarios.html">Valocracy Test Scenarios</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -180,7 +180,61 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="foundry"><a class="header" href="#foundry">Foundry</a></h2>
+                        <h1 id="valocracy"><a class="header" href="#valocracy">Valocracy</a></h1>
+<p>Valocracy is a novel social, economic, and political framework that leverages blockchain technology to create new forms of organizations with the goal of empowering communities along with their individuals and their combined efforts. It aims to provide a structured approach to building more efficient and fair decentralized organizations.</p>
+<h2 id="core-principles"><a class="header" href="#core-principles">Core Principles</a></h2>
+<ol>
+<li>
+<p><strong>Tokenized Effort</strong>: Effort is tokenized through two distinct tokens:</p>
+<ul>
+<li><strong>Governance Power</strong>: Implemented as ERC20Votes with <a href="https://eips.ethereum.org/EIPS/eip-7787">Soulbound Degradable Governance (SDG)</a> standard, ensuring voting power cannot be transferred and decays over time without active participation</li>
+<li><strong>Economic Power</strong>: Implemented as ERC20 with ERC4626 vault interface, representing shares of the underlying treasury asset</li>
+</ul>
+</li>
+<li>
+<p><strong>Valueholder Concept</strong>: Blurs the distinction between shareholders and laborers, allowing individuals to decide when to act as paid laborers or shareholders.</p>
+</li>
+<li>
+<p><strong>Time-Based Governance</strong>: Governance power follows a dynamic curve:</p>
+<ul>
+<li><strong>Stable Period</strong>: Initial period where governance power remains constant</li>
+<li><strong>Decay Period</strong>: Following the stable period, governance power gradually decreases over time</li>
+<li>This mechanism ensures active participation while preventing governance attacks</li>
+</ul>
+</li>
+</ol>
+<h2 id="smart-contracts"><a class="header" href="#smart-contracts">Smart Contracts</a></h2>
+<p>The project consists of several core smart contracts:</p>
+<ul>
+<li><strong>Valocracy.sol</strong>: The main contract implementing ERC20Votes with SDG.</li>
+<li><strong>Treasury.sol</strong>: Manages the collective treasury and economic power distribution using ERC20</li>
+<li><strong>SDG.sol</strong>: Implements the <a href="https://eips.ethereum.org/EIPS/eip-7787">IERC7787</a> for Soulbound Degradable Governance</li>
+<li><strong>Interfaces/</strong>: Contains the core interfaces for the system</li>
+</ul>
+<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<p>We welcome contributions from the community! Here's how you can get involved:</p>
+<ol>
+<li>Join our Discord community at <a href="https://discord.w3d.community">discord.w3d.community</a></li>
+<li>Fork the repository and create a new branch</li>
+<li>Submit a pull request</li>
+</ol>
+<h2 id="learn-more"><a class="header" href="#learn-more">Learn More</a></h2>
+<p>For a deeper understanding of Valocracy's principles and vision, please read our <a href="https://valocracy.xyz/en/read-the-manifesto">Manifesto</a>.</p>
+<hr />
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
+<h3 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h3>
+<ul>
+<li>Foundry (see Foundry section below)</li>
+</ul>
+<h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
+<pre><code class="language-bash"># Clone the repository
+git clone https://github.com/your-org/valocracy-contracts.git
+cd valocracy-contracts
+
+# Install dependencies
+forge install
+</code></pre>
+<h2 id="foundry"><a class="header" href="#foundry">Foundry</a></h2>
 <p><strong>Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.</strong></p>
 <p>Foundry consists of:</p>
 <ul>
@@ -189,37 +243,204 @@
 <li><strong>Anvil</strong>: Local Ethereum node, akin to Ganache, Hardhat Network.</li>
 <li><strong>Chisel</strong>: Fast, utilitarian, and verbose solidity REPL.</li>
 </ul>
-<h2 id="documentation"><a class="header" href="#documentation">Documentation</a></h2>
+<h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
 <p>https://book.getfoundry.sh/</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<h3 id="build"><a class="header" href="#build">Build</a></h3>
+<h3 id="usage"><a class="header" href="#usage">Usage</a></h3>
+<h4 id="build"><a class="header" href="#build">Build</a></h4>
 <pre><code class="language-shell">$ forge build
 </code></pre>
-<h3 id="test"><a class="header" href="#test">Test</a></h3>
+<h4 id="test"><a class="header" href="#test">Test</a></h4>
 <pre><code class="language-shell">$ forge test
 </code></pre>
-<h3 id="format"><a class="header" href="#format">Format</a></h3>
+<h4 id="format"><a class="header" href="#format">Format</a></h4>
 <pre><code class="language-shell">$ forge fmt
 </code></pre>
-<h3 id="gas-snapshots"><a class="header" href="#gas-snapshots">Gas Snapshots</a></h3>
+<h4 id="gas-snapshots"><a class="header" href="#gas-snapshots">Gas Snapshots</a></h4>
 <pre><code class="language-shell">$ forge snapshot
 </code></pre>
-<h3 id="anvil"><a class="header" href="#anvil">Anvil</a></h3>
+<h4 id="anvil"><a class="header" href="#anvil">Anvil</a></h4>
 <pre><code class="language-shell">$ anvil
 </code></pre>
-<h3 id="deploy"><a class="header" href="#deploy">Deploy</a></h3>
+<h4 id="deploy"><a class="header" href="#deploy">Deploy</a></h4>
 <pre><code class="language-shell">$ forge script script/Counter.s.sol:CounterScript --rpc-url &lt;your_rpc_url&gt; --private-key &lt;your_private_key&gt;
 </code></pre>
-<h3 id="cast"><a class="header" href="#cast">Cast</a></h3>
+<h4 id="cast"><a class="header" href="#cast">Cast</a></h4>
 <pre><code class="language-shell">$ cast &lt;subcommand&gt;
 </code></pre>
-<h3 id="help"><a class="header" href="#help">Help</a></h3>
+<h4 id="help"><a class="header" href="#help">Help</a></h4>
 <pre><code class="language-shell">$ forge --help
 $ anvil --help
 $ cast --help
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents"><a class="header" href="#contents">Contents</a></h1>
+<ul>
+<li><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li>
+<li><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li>
+<li><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ierc7787"><a class="header" href="#ierc7787">IERC7787</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/interfaces/IERC7787.sol">Git Source</a></p>
+<h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
+<h3 id="stableperiod"><a class="header" href="#stableperiod">stablePeriod</a></h3>
+<p><em>Returns the grace period duration before the voting units begins decaying. This period is
+fixed to 90 days. But it can be overridden in derived contracts.</em></p>
+<pre><code class="language-solidity">function stablePeriod() external view returns (uint256);
+</code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The duration of the grace period in seconds.</td></tr>
+</tbody></table>
+</div>
+<h3 id="decayperiod"><a class="header" href="#decayperiod">decayPeriod</a></h3>
+<p><em>Returns the duration of the decay period during which the voting units decreases. This
+period is fixed to 90 days. But it can be overridden in derived contracts.</em></p>
+<pre><code class="language-solidity">function decayPeriod() external view returns (uint256);
+</code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The duration of the decay period in seconds.</td></tr>
+</tbody></table>
+</div>
+<h3 id="accountstats"><a class="header" href="#accountstats">accountStats</a></h3>
+<p><em>Returns the raw last participation timestamp of an account without any decay adjustments.</em></p>
+<pre><code class="language-solidity">function accountStats(address account) external view returns (uint32);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="itreasury"><a class="header" href="#itreasury">ITreasury</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/interfaces/ITreasury.sol">Git Source</a></p>
+<h2 id="functions-1"><a class="header" href="#functions-1">Functions</a></h2>
+<h3 id="asset"><a class="header" href="#asset">asset</a></h3>
+<p><em>Returns the address of the underlying token used for the Vault
+for accounting, depositing, and withdrawing.</em></p>
+<pre><code class="language-solidity">function asset() external view returns (address assetTokenAddress);
+</code></pre>
+<h3 id="totalassets"><a class="header" href="#totalassets">totalAssets</a></h3>
+<p><em>Returns the total amount of the underlying asset that is “managed”
+by Vault.</em></p>
+<pre><code class="language-solidity">function totalAssets() external view returns (uint256 totalManagedAssets);
+</code></pre>
+<h3 id="previewwithdraw"><a class="header" href="#previewwithdraw">previewWithdraw</a></h3>
+<p><em>Returns the amount of the underlying asset that would be returned
+from withdrawing the given amount of shares.</em></p>
+<pre><code class="language-solidity">function previewWithdraw(uint256 shares) external view returns (uint256 assets);
+</code></pre>
+<h3 id="deposit"><a class="header" href="#deposit">deposit</a></h3>
+<p><em>Deposits the given amount of shares into the Vault.</em></p>
+<pre><code class="language-solidity">function deposit(address receiver, uint256 shares) external;
+</code></pre>
+<h3 id="withdraw"><a class="header" href="#withdraw">withdraw</a></h3>
+<p><em>Withdraws the given amount of shares from the Vault.</em></p>
+<pre><code class="language-solidity">function withdraw(address receiver, uint256 shares) external;
+</code></pre>
+<h2 id="events"><a class="header" href="#events">Events</a></h2>
+<h3 id="deposit-1"><a class="header" href="#deposit-1">Deposit</a></h3>
+<p><em>Emitted when a new deposit of shares is made.</em></p>
+<pre><code class="language-solidity">event Deposit(address indexed receiver, uint256 shares);
+</code></pre>
+<h3 id="withdraw-1"><a class="header" href="#withdraw-1">Withdraw</a></h3>
+<p><em>Emitted when a withdrawal of shares is made.</em></p>
+<pre><code class="language-solidity">event Withdraw(address indexed owner, address indexed receiver, uint256 assets, uint256 shares);
+</code></pre>
+<h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
+<h3 id="notauthorized"><a class="header" href="#notauthorized">NotAuthorized</a></h3>
+<p><em>Emitted when a non-authorized account attempts to call a function.</em></p>
+<pre><code class="language-solidity">error NotAuthorized(address caller);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ivalocracy"><a class="header" href="#ivalocracy">IValocracy</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/interfaces/IValocracy.sol">Git Source</a></p>
+<h2 id="functions-2"><a class="header" href="#functions-2">Functions</a></h2>
+<h3 id="governor"><a class="header" href="#governor">governor</a></h3>
+<p><em>Return the Governor contract address.
+The Governor contract must be provided by calling <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#setgovernor">setGovernor</a>.
+Otherwise {Governance-vote} will revert.</em></p>
+<pre><code class="language-solidity">function governor() external view returns (address);
+</code></pre>
+<h3 id="treasury"><a class="header" href="#treasury">treasury</a></h3>
+<p><em>Return the Treasury contract address.
+The Treasury contract must be provided by calling <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#settreasury">setTreasury</a>.
+Otherwise {Valocracy-mint} will revert.</em></p>
+<pre><code class="language-solidity">function treasury() external view returns (address);
+</code></pre>
+<h3 id="totalsupply"><a class="header" href="#totalsupply">totalSupply</a></h3>
+<p><em>Return the total supply of NFTs in this contract.</em></p>
+<pre><code class="language-solidity">function totalSupply() external view returns (uint256);
+</code></pre>
+<h3 id="mint"><a class="header" href="#mint">mint</a></h3>
+<p>*Mints a new NFT.
+The level will be set to the level of the sender plus the rarity of the
+valor. If the account is on vacancy, the level will be set to the rarity
+of the valor. The expiration will be set to the current timestamp plus
+the vacancy period.
+Requirements:</p>
+<ul>
+<li><code>valorId</code> must exist.</li>
+<li><code>expiration</code> must be in the future.
+Emits a <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#mint">Mint</a> event.*</li>
+</ul>
+<pre><code class="language-solidity">function mint(address account, uint256 valorId) external;
+</code></pre>
+<h3 id="burn"><a class="header" href="#burn">burn</a></h3>
+<p>*Burn the given token ID.
+Requirements:</p>
+<ul>
+<li><code>tokenId</code> must exist.</li>
+<li><code>msg.sender</code> must be the owner of the token.
+Emits a {Transfer} event to the Zero Address.*</li>
+</ul>
+<pre><code class="language-solidity">function burn(uint256 tokenId) external;
+</code></pre>
+<h3 id="setvalor"><a class="header" href="#setvalor">setValor</a></h3>
+<p>*Create a new Valor for the protocol.
+Valor is a NFT that represents governance power. Their characteristics
+are its rarity and metadata. The rarity will determine the level of
+governance power and the metadata will be for off-chain display.
+Requirements:</p>
+<ul>
+<li><code>msg.sender</code> must be the owner of the contract.
+Emits a {NewValor} event.*</li>
+</ul>
+<pre><code class="language-solidity">function setValor(uint256 valorId, uint64 rarity, string memory metadata) external;
+</code></pre>
+<h3 id="settreasury"><a class="header" href="#settreasury">setTreasury</a></h3>
+<p>*Set the Treasury contract address.
+Requirements:</p>
+<ul>
+<li><code>msg.sender</code> must be the owner of the contract.*</li>
+</ul>
+<pre><code class="language-solidity">function setTreasury(address treasury_) external;
+</code></pre>
+<h3 id="setgovernor"><a class="header" href="#setgovernor">setGovernor</a></h3>
+<p>*Set the Governor contract address.
+Requirements:</p>
+<ul>
+<li><code>msg.sender</code> must be the owner of the contract.*</li>
+</ul>
+<pre><code class="language-solidity">function setGovernor(address governor_) external;
+</code></pre>
+<h2 id="events-1"><a class="header" href="#events-1">Events</a></h2>
+<h3 id="mint-1"><a class="header" href="#mint-1">Mint</a></h3>
+<p><em>Emitted when a valor is updated or introduced.</em></p>
+<pre><code class="language-solidity">event Mint(address indexed account, uint256 indexed valorId);
+</code></pre>
+<h3 id="valorupdate"><a class="header" href="#valorupdate">ValorUpdate</a></h3>
+<p><em>Emitted when a valor is updated or introduced.</em></p>
+<pre><code class="language-solidity">event ValorUpdate(uint256 indexed valorId, uint256 rarity, string metadata);
+</code></pre>
+<h3 id="governorupdate"><a class="header" href="#governorupdate">GovernorUpdate</a></h3>
+<p><em>Emitted when the Governor contract address is updated.</em></p>
+<pre><code class="language-solidity">event GovernorUpdate(address indexed governor);
+</code></pre>
+<h3 id="treasuryupdate"><a class="header" href="#treasuryupdate">TreasuryUpdate</a></h3>
+<p><em>Emitted when the treasury contract address is updated.</em></p>
+<pre><code class="language-solidity">event TreasuryUpdate(address indexed treasury);
+</code></pre>
+<h2 id="errors-1"><a class="header" href="#errors-1">Errors</a></h2>
+<h3 id="tokensoulbound"><a class="header" href="#tokensoulbound">TokenSoulbound</a></h3>
+<p><em>Emitted when a soulbound token is attemps to be transferred to
+another account that is not the zero address.</em></p>
+<pre><code class="language-solidity">error TokenSoulbound();
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sdg"><a class="header" href="#sdg">SDG</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/cc23733bef36f5764ced212bbe0dc6dc3badbf1c/src/SDG.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/SDG.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 <a href="src/SDG.sol//src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></p>
 <p><strong>Author:</strong>
@@ -262,8 +483,8 @@ Requirements:</p>
 <h3 id="_decayperiod"><a class="header" href="#_decayperiod">_decayPeriod</a></h3>
 <pre><code class="language-solidity">uint32 private _decayPeriod;
 </code></pre>
-<h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
-<h3 id="stableperiod"><a class="header" href="#stableperiod">stablePeriod</a></h3>
+<h2 id="functions-3"><a class="header" href="#functions-3">Functions</a></h2>
+<h3 id="stableperiod-1"><a class="header" href="#stableperiod-1">stablePeriod</a></h3>
 <p><em>Returns the duration of the stable period in days.</em></p>
 <pre><code class="language-solidity">function stablePeriod() public view virtual returns (uint256);
 </code></pre>
@@ -272,7 +493,7 @@ Requirements:</p>
 <tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The duration of the stable period in days.</td></tr>
 </tbody></table>
 </div>
-<h3 id="decayperiod"><a class="header" href="#decayperiod">decayPeriod</a></h3>
+<h3 id="decayperiod-1"><a class="header" href="#decayperiod-1">decayPeriod</a></h3>
 <p><em>Returns the duration of the decay period in days.</em></p>
 <pre><code class="language-solidity">function decayPeriod() public view virtual returns (uint256);
 </code></pre>
@@ -281,7 +502,7 @@ Requirements:</p>
 <tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The duration of the decay period in days.</td></tr>
 </tbody></table>
 </div>
-<h3 id="accountstats"><a class="header" href="#accountstats">accountStats</a></h3>
+<h3 id="accountstats-1"><a class="header" href="#accountstats-1">accountStats</a></h3>
 <p><em>Returns the raw last participation timestamp of an account without any decay adjustments.</em></p>
 <pre><code class="language-solidity">function accountStats(address account) public view virtual returns (uint32);
 </code></pre>
@@ -335,8 +556,8 @@ Requirements:</p>
 <div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
 <tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The current balance with decay applied</td></tr>
 </tbody></table>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="treasury"><a class="header" href="#treasury">Treasury</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/cc23733bef36f5764ced212bbe0dc6dc3badbf1c/src/Treasury.sol">Git Source</a></p>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="treasury-1"><a class="header" href="#treasury-1">Treasury</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/Treasury.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 ERC20, <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></p>
 <h2 id="state-variables-1"><a class="header" href="#state-variables-1">State Variables</a></h2>
@@ -348,38 +569,38 @@ ERC20, <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasu
 <p><em>The Valocracy contract.</em></p>
 <pre><code class="language-solidity">address private _valocracy;
 </code></pre>
-<h2 id="functions-1"><a class="header" href="#functions-1">Functions</a></h2>
+<h2 id="functions-4"><a class="header" href="#functions-4">Functions</a></h2>
 <h3 id="constructor"><a class="header" href="#constructor">constructor</a></h3>
 <p><em>Initializes the contract by setting a <code>name</code> and a <code>symbol</code>
 for the fungible token. Also sets the Valocracy contract and the
 underlying asset token.</em></p>
 <pre><code class="language-solidity">constructor(IERC20 asset_, address valocracy, string memory name, string memory symbol) ERC20(name, symbol);
 </code></pre>
-<h3 id="asset"><a class="header" href="#asset">asset</a></h3>
+<h3 id="asset-1"><a class="header" href="#asset-1">asset</a></h3>
 <p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#asset">IERC4626-asset</a>.</em></p>
 <pre><code class="language-solidity">function asset() public view virtual returns (address);
 </code></pre>
-<h3 id="totalassets"><a class="header" href="#totalassets">totalAssets</a></h3>
+<h3 id="totalassets-1"><a class="header" href="#totalassets-1">totalAssets</a></h3>
 <p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#totalassets">IERC4626-totalAssets</a>.</em></p>
 <pre><code class="language-solidity">function totalAssets() public view virtual returns (uint256);
 </code></pre>
-<h3 id="previewwithdraw"><a class="header" href="#previewwithdraw">previewWithdraw</a></h3>
+<h3 id="previewwithdraw-1"><a class="header" href="#previewwithdraw-1">previewWithdraw</a></h3>
 <p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#previewwithdraw">IERC4626-previewWithdraw</a>.</em></p>
 <p><em>Calculates the amount of assets that would be returned for burning the given amount of shares.
 The calculation is based on the proportion of total assets to total shares.
 For example, if there are 2000 assets and 1000 shares, each share represents 2 assets.</em></p>
 <pre><code class="language-solidity">function previewWithdraw(uint256 shares) public view virtual returns (uint256);
 </code></pre>
-<h3 id="deposit"><a class="header" href="#deposit">deposit</a></h3>
+<h3 id="deposit-2"><a class="header" href="#deposit-2">deposit</a></h3>
 <p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#deposit">IERC4626-deposit</a>.</em></p>
 <pre><code class="language-solidity">function deposit(address receiver, uint256 shares) public;
 </code></pre>
-<h3 id="withdraw"><a class="header" href="#withdraw">withdraw</a></h3>
+<h3 id="withdraw-2"><a class="header" href="#withdraw-2">withdraw</a></h3>
 <p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#withdraw">IERC4626-withdraw</a>.</em></p>
 <pre><code class="language-solidity">function withdraw(address receiver, uint256 shares) public;
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="valocracy"><a class="header" href="#valocracy">Valocracy</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/cc23733bef36f5764ced212bbe0dc6dc3badbf1c/src/Valocracy.sol">Git Source</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="valocracy-1"><a class="header" href="#valocracy-1">Valocracy</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/Valocracy.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 ERC20Votes, Ownable, <a href="src/Valocracy.sol//src/SDG.sol/abstract.SDG.html">SDG</a></p>
 <p>Implementation of the EIP-7787 Soulbound Degradable Governance standard using ERC20 tokens</p>
@@ -393,7 +614,7 @@ ERC20Votes, Ownable, <a href="src/Valocracy.sol//src/SDG.sol/abstract.SDG.html">
 <p><em>Mapping from accounts addresses to their last participation timestamp</em></p>
 <pre><code class="language-solidity">mapping(address =&gt; uint32) private _lastParticipation;
 </code></pre>
-<h2 id="functions-2"><a class="header" href="#functions-2">Functions</a></h2>
+<h2 id="functions-5"><a class="header" href="#functions-5">Functions</a></h2>
 <h3 id="constructor-1"><a class="header" href="#constructor-1">constructor</a></h3>
 <p><em>Initializes the contract by setting a <code>name</code> and a <code>symbol</code>.
 Sets default stable and decay periods to 90 days each.</em></p>
@@ -481,7 +702,7 @@ Updates the last participation timestamp to start the stable period.</em></p>
 <tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of voting units to grant</td></tr>
 </tbody></table>
 </div>
-<h3 id="burn"><a class="header" href="#burn">burn</a></h3>
+<h3 id="burn-1"><a class="header" href="#burn-1">burn</a></h3>
 <p>Burns tokens and reduces the voting units associated with the token holder.</p>
 <pre><code class="language-solidity">function burn(uint256 amount) public virtual;
 </code></pre>
@@ -489,174 +710,7 @@ Updates the last participation timestamp to start the stable period.</em></p>
 <div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
 <tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens to burn</td></tr>
 </tbody></table>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="contents"><a class="header" href="#contents">Contents</a></h1>
-<ul>
-<li><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li>
-<li><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li>
-<li><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ierc7787"><a class="header" href="#ierc7787">IERC7787</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/cc23733bef36f5764ced212bbe0dc6dc3badbf1c/src/interfaces/IERC7787.sol">Git Source</a></p>
-<h2 id="functions-3"><a class="header" href="#functions-3">Functions</a></h2>
-<h3 id="stableperiod-1"><a class="header" href="#stableperiod-1">stablePeriod</a></h3>
-<p><em>Returns the grace period duration before the voting units begins decaying. This period is
-fixed to 90 days. But it can be overridden in derived contracts.</em></p>
-<pre><code class="language-solidity">function stablePeriod() external view returns (uint256);
-</code></pre>
-<p><strong>Returns</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
-<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The duration of the grace period in seconds.</td></tr>
-</tbody></table>
-</div>
-<h3 id="decayperiod-1"><a class="header" href="#decayperiod-1">decayPeriod</a></h3>
-<p><em>Returns the duration of the decay period during which the voting units decreases. This
-period is fixed to 90 days. But it can be overridden in derived contracts.</em></p>
-<pre><code class="language-solidity">function decayPeriod() external view returns (uint256);
-</code></pre>
-<p><strong>Returns</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
-<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The duration of the decay period in seconds.</td></tr>
-</tbody></table>
-</div>
-<h3 id="accountstats-1"><a class="header" href="#accountstats-1">accountStats</a></h3>
-<p><em>Returns the raw last participation timestamp of an account without any decay adjustments.</em></p>
-<pre><code class="language-solidity">function accountStats(address account) external view returns (uint32);
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="itreasury"><a class="header" href="#itreasury">ITreasury</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/cc23733bef36f5764ced212bbe0dc6dc3badbf1c/src/interfaces/ITreasury.sol">Git Source</a></p>
-<h2 id="functions-4"><a class="header" href="#functions-4">Functions</a></h2>
-<h3 id="asset-1"><a class="header" href="#asset-1">asset</a></h3>
-<p><em>Returns the address of the underlying token used for the Vault
-for accounting, depositing, and withdrawing.</em></p>
-<pre><code class="language-solidity">function asset() external view returns (address assetTokenAddress);
-</code></pre>
-<h3 id="totalassets-1"><a class="header" href="#totalassets-1">totalAssets</a></h3>
-<p><em>Returns the total amount of the underlying asset that is “managed”
-by Vault.</em></p>
-<pre><code class="language-solidity">function totalAssets() external view returns (uint256 totalManagedAssets);
-</code></pre>
-<h3 id="previewwithdraw-1"><a class="header" href="#previewwithdraw-1">previewWithdraw</a></h3>
-<p><em>Returns the amount of the underlying asset that would be returned
-from withdrawing the given amount of shares.</em></p>
-<pre><code class="language-solidity">function previewWithdraw(uint256 shares) external view returns (uint256 assets);
-</code></pre>
-<h3 id="deposit-1"><a class="header" href="#deposit-1">deposit</a></h3>
-<p><em>Deposits the given amount of shares into the Vault.</em></p>
-<pre><code class="language-solidity">function deposit(address receiver, uint256 shares) external;
-</code></pre>
-<h3 id="withdraw-1"><a class="header" href="#withdraw-1">withdraw</a></h3>
-<p><em>Withdraws the given amount of shares from the Vault.</em></p>
-<pre><code class="language-solidity">function withdraw(address receiver, uint256 shares) external;
-</code></pre>
-<h2 id="events"><a class="header" href="#events">Events</a></h2>
-<h3 id="deposit-2"><a class="header" href="#deposit-2">Deposit</a></h3>
-<p><em>Emitted when a new deposit of shares is made.</em></p>
-<pre><code class="language-solidity">event Deposit(address indexed receiver, uint256 shares);
-</code></pre>
-<h3 id="withdraw-2"><a class="header" href="#withdraw-2">Withdraw</a></h3>
-<p><em>Emitted when a withdrawal of shares is made.</em></p>
-<pre><code class="language-solidity">event Withdraw(address indexed owner, address indexed receiver, uint256 assets, uint256 shares);
-</code></pre>
-<h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
-<h3 id="notauthorized"><a class="header" href="#notauthorized">NotAuthorized</a></h3>
-<p><em>Emitted when a non-authorized account attempts to call a function.</em></p>
-<pre><code class="language-solidity">error NotAuthorized(address caller);
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ivalocracy"><a class="header" href="#ivalocracy">IValocracy</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/cc23733bef36f5764ced212bbe0dc6dc3badbf1c/src/interfaces/IValocracy.sol">Git Source</a></p>
-<h2 id="functions-5"><a class="header" href="#functions-5">Functions</a></h2>
-<h3 id="governor"><a class="header" href="#governor">governor</a></h3>
-<p><em>Return the Governor contract address.
-The Governor contract must be provided by calling <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#setgovernor">setGovernor</a>.
-Otherwise {Governance-vote} will revert.</em></p>
-<pre><code class="language-solidity">function governor() external view returns (address);
-</code></pre>
-<h3 id="treasury-1"><a class="header" href="#treasury-1">treasury</a></h3>
-<p><em>Return the Treasury contract address.
-The Treasury contract must be provided by calling <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#settreasury">setTreasury</a>.
-Otherwise {Valocracy-mint} will revert.</em></p>
-<pre><code class="language-solidity">function treasury() external view returns (address);
-</code></pre>
-<h3 id="totalsupply"><a class="header" href="#totalsupply">totalSupply</a></h3>
-<p><em>Return the total supply of NFTs in this contract.</em></p>
-<pre><code class="language-solidity">function totalSupply() external view returns (uint256);
-</code></pre>
-<h3 id="mint"><a class="header" href="#mint">mint</a></h3>
-<p>*Mints a new NFT.
-The level will be set to the level of the sender plus the rarity of the
-valor. If the account is on vacancy, the level will be set to the rarity
-of the valor. The expiration will be set to the current timestamp plus
-the vacancy period.
-Requirements:</p>
-<ul>
-<li><code>valorId</code> must exist.</li>
-<li><code>expiration</code> must be in the future.
-Emits a <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#mint">Mint</a> event.*</li>
-</ul>
-<pre><code class="language-solidity">function mint(address account, uint256 valorId) external;
-</code></pre>
-<h3 id="burn-1"><a class="header" href="#burn-1">burn</a></h3>
-<p>*Burn the given token ID.
-Requirements:</p>
-<ul>
-<li><code>tokenId</code> must exist.</li>
-<li><code>msg.sender</code> must be the owner of the token.
-Emits a {Transfer} event to the Zero Address.*</li>
-</ul>
-<pre><code class="language-solidity">function burn(uint256 tokenId) external;
-</code></pre>
-<h3 id="setvalor"><a class="header" href="#setvalor">setValor</a></h3>
-<p>*Create a new Valor for the protocol.
-Valor is a NFT that represents governance power. Their characteristics
-are its rarity and metadata. The rarity will determine the level of
-governance power and the metadata will be for off-chain display.
-Requirements:</p>
-<ul>
-<li><code>msg.sender</code> must be the owner of the contract.
-Emits a {NewValor} event.*</li>
-</ul>
-<pre><code class="language-solidity">function setValor(uint256 valorId, uint64 rarity, string memory metadata) external;
-</code></pre>
-<h3 id="settreasury"><a class="header" href="#settreasury">setTreasury</a></h3>
-<p>*Set the Treasury contract address.
-Requirements:</p>
-<ul>
-<li><code>msg.sender</code> must be the owner of the contract.*</li>
-</ul>
-<pre><code class="language-solidity">function setTreasury(address treasury_) external;
-</code></pre>
-<h3 id="setgovernor"><a class="header" href="#setgovernor">setGovernor</a></h3>
-<p>*Set the Governor contract address.
-Requirements:</p>
-<ul>
-<li><code>msg.sender</code> must be the owner of the contract.*</li>
-</ul>
-<pre><code class="language-solidity">function setGovernor(address governor_) external;
-</code></pre>
-<h2 id="events-1"><a class="header" href="#events-1">Events</a></h2>
-<h3 id="mint-1"><a class="header" href="#mint-1">Mint</a></h3>
-<p><em>Emitted when a valor is updated or introduced.</em></p>
-<pre><code class="language-solidity">event Mint(address indexed account, uint256 indexed valorId);
-</code></pre>
-<h3 id="valorupdate"><a class="header" href="#valorupdate">ValorUpdate</a></h3>
-<p><em>Emitted when a valor is updated or introduced.</em></p>
-<pre><code class="language-solidity">event ValorUpdate(uint256 indexed valorId, uint256 rarity, string metadata);
-</code></pre>
-<h3 id="governorupdate"><a class="header" href="#governorupdate">GovernorUpdate</a></h3>
-<p><em>Emitted when the Governor contract address is updated.</em></p>
-<pre><code class="language-solidity">event GovernorUpdate(address indexed governor);
-</code></pre>
-<h3 id="treasuryupdate"><a class="header" href="#treasuryupdate">TreasuryUpdate</a></h3>
-<p><em>Emitted when the treasury contract address is updated.</em></p>
-<pre><code class="language-solidity">event TreasuryUpdate(address indexed treasury);
-</code></pre>
-<h2 id="errors-1"><a class="header" href="#errors-1">Errors</a></h2>
-<h3 id="tokensoulbound"><a class="header" href="#tokensoulbound">TokenSoulbound</a></h3>
-<p><em>Emitted when a soulbound token is attemps to be transferred to
-another account that is not the zero address.</em></p>
-<pre><code class="language-solidity">error TokenSoulbound();
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="testing-documentation"><a class="header" href="#testing-documentation">Testing Documentation</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="testing-documentation"><a class="header" href="#testing-documentation">Testing Documentation</a></h1>
 <p>This section contains detailed documentation about the test coverage and missing's test scenarios for the Valocracy contracts.</p>
 <h2 id="contents-1"><a class="header" href="#contents-1">Contents</a></h2>
 <ul>

@@ -1,5 +1,5 @@
 # SafeCast
-[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/cc23733bef36f5764ced212bbe0dc6dc3badbf1c/src/math/SafeCast.sol)
+[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/math/SafeCast.sol)
 
 *Wrappers over Solidity's uintXX/intXX casting operators with added overflow
 checks.

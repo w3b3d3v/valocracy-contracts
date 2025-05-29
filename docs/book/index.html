@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html" class="active">Home</a></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="testing/index.html">❱ testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li><li class="chapter-item "><a href="testing/ValocracyTestCoverage.html">Valocracy Test Coverage</a></li><li class="chapter-item "><a href="testing/ValocracyTestScenarios.html">Valocracy Test Scenarios</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html" class="active">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item affix "><li class="part-title">testing</li><li class="chapter-item "><a href="testing/index.html">❱ testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li><li class="chapter-item "><a href="testing/ValocracyTestCoverage.html">Valocracy Test Coverage</a></li><li class="chapter-item "><a href="testing/ValocracyTestScenarios.html">Valocracy Test Scenarios</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -179,7 +179,61 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="foundry"><a class="header" href="#foundry">Foundry</a></h2>
+                        <h1 id="valocracy"><a class="header" href="#valocracy">Valocracy</a></h1>
+<p>Valocracy is a novel social, economic, and political framework that leverages blockchain technology to create new forms of organizations with the goal of empowering communities along with their individuals and their combined efforts. It aims to provide a structured approach to building more efficient and fair decentralized organizations.</p>
+<h2 id="core-principles"><a class="header" href="#core-principles">Core Principles</a></h2>
+<ol>
+<li>
+<p><strong>Tokenized Effort</strong>: Effort is tokenized through two distinct tokens:</p>
+<ul>
+<li><strong>Governance Power</strong>: Implemented as ERC20Votes with <a href="https://eips.ethereum.org/EIPS/eip-7787">Soulbound Degradable Governance (SDG)</a> standard, ensuring voting power cannot be transferred and decays over time without active participation</li>
+<li><strong>Economic Power</strong>: Implemented as ERC20 with ERC4626 vault interface, representing shares of the underlying treasury asset</li>
+</ul>
+</li>
+<li>
+<p><strong>Valueholder Concept</strong>: Blurs the distinction between shareholders and laborers, allowing individuals to decide when to act as paid laborers or shareholders.</p>
+</li>
+<li>
+<p><strong>Time-Based Governance</strong>: Governance power follows a dynamic curve:</p>
+<ul>
+<li><strong>Stable Period</strong>: Initial period where governance power remains constant</li>
+<li><strong>Decay Period</strong>: Following the stable period, governance power gradually decreases over time</li>
+<li>This mechanism ensures active participation while preventing governance attacks</li>
+</ul>
+</li>
+</ol>
+<h2 id="smart-contracts"><a class="header" href="#smart-contracts">Smart Contracts</a></h2>
+<p>The project consists of several core smart contracts:</p>
+<ul>
+<li><strong>Valocracy.sol</strong>: The main contract implementing ERC20Votes with SDG.</li>
+<li><strong>Treasury.sol</strong>: Manages the collective treasury and economic power distribution using ERC20</li>
+<li><strong>SDG.sol</strong>: Implements the <a href="https://eips.ethereum.org/EIPS/eip-7787">IERC7787</a> for Soulbound Degradable Governance</li>
+<li><strong>Interfaces/</strong>: Contains the core interfaces for the system</li>
+</ul>
+<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<p>We welcome contributions from the community! Here's how you can get involved:</p>
+<ol>
+<li>Join our Discord community at <a href="https://discord.w3d.community">discord.w3d.community</a></li>
+<li>Fork the repository and create a new branch</li>
+<li>Submit a pull request</li>
+</ol>
+<h2 id="learn-more"><a class="header" href="#learn-more">Learn More</a></h2>
+<p>For a deeper understanding of Valocracy's principles and vision, please read our <a href="https://valocracy.xyz/en/read-the-manifesto">Manifesto</a>.</p>
+<hr />
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
+<h3 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h3>
+<ul>
+<li>Foundry (see Foundry section below)</li>
+</ul>
+<h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
+<pre><code class="language-bash"># Clone the repository
+git clone https://github.com/your-org/valocracy-contracts.git
+cd valocracy-contracts
+
+# Install dependencies
+forge install
+</code></pre>
+<h2 id="foundry"><a class="header" href="#foundry">Foundry</a></h2>
 <p><strong>Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.</strong></p>
 <p>Foundry consists of:</p>
 <ul>
@@ -188,31 +242,31 @@
 <li><strong>Anvil</strong>: Local Ethereum node, akin to Ganache, Hardhat Network.</li>
 <li><strong>Chisel</strong>: Fast, utilitarian, and verbose solidity REPL.</li>
 </ul>
-<h2 id="documentation"><a class="header" href="#documentation">Documentation</a></h2>
+<h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
 <p>https://book.getfoundry.sh/</p>
-<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
-<h3 id="build"><a class="header" href="#build">Build</a></h3>
+<h3 id="usage"><a class="header" href="#usage">Usage</a></h3>
+<h4 id="build"><a class="header" href="#build">Build</a></h4>
 <pre><code class="language-shell">$ forge build
 </code></pre>
-<h3 id="test"><a class="header" href="#test">Test</a></h3>
+<h4 id="test"><a class="header" href="#test">Test</a></h4>
 <pre><code class="language-shell">$ forge test
 </code></pre>
-<h3 id="format"><a class="header" href="#format">Format</a></h3>
+<h4 id="format"><a class="header" href="#format">Format</a></h4>
 <pre><code class="language-shell">$ forge fmt
 </code></pre>
-<h3 id="gas-snapshots"><a class="header" href="#gas-snapshots">Gas Snapshots</a></h3>
+<h4 id="gas-snapshots"><a class="header" href="#gas-snapshots">Gas Snapshots</a></h4>
 <pre><code class="language-shell">$ forge snapshot
 </code></pre>
-<h3 id="anvil"><a class="header" href="#anvil">Anvil</a></h3>
+<h4 id="anvil"><a class="header" href="#anvil">Anvil</a></h4>
 <pre><code class="language-shell">$ anvil
 </code></pre>
-<h3 id="deploy"><a class="header" href="#deploy">Deploy</a></h3>
+<h4 id="deploy"><a class="header" href="#deploy">Deploy</a></h4>
 <pre><code class="language-shell">$ forge script script/Counter.s.sol:CounterScript --rpc-url &lt;your_rpc_url&gt; --private-key &lt;your_private_key&gt;
 </code></pre>
-<h3 id="cast"><a class="header" href="#cast">Cast</a></h3>
+<h4 id="cast"><a class="header" href="#cast">Cast</a></h4>
 <pre><code class="language-shell">$ cast &lt;subcommand&gt;
 </code></pre>
-<h3 id="help"><a class="header" href="#help">Help</a></h3>
+<h4 id="help"><a class="header" href="#help">Help</a></h4>
 <pre><code class="language-shell">$ forge --help
 $ anvil --help
 $ cast --help
@@ -223,7 +277,7 @@ $ cast --help
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next prefetch" href="src/SDG.sol/abstract.SDG.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="src/interfaces/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -234,7 +288,7 @@ $ cast --help
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next prefetch" href="src/SDG.sol/abstract.SDG.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="src/interfaces/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
