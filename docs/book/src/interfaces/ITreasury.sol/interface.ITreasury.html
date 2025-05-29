@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="../../../index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item expanded "><a href="../../../src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item expanded "><a href="../../../src/interfaces/ITreasury.sol/interface.ITreasury.html" class="active">ITreasury</a></li><li class="chapter-item "><a href="../../../src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="../../../src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="../../../src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="../../../src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item affix "><li class="part-title">testing</li><li class="chapter-item "><a href="../../../testing/index.html">❱ testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="../../../testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li><li class="chapter-item "><a href="../../../testing/ValocracyTestCoverage.html">Valocracy Test Coverage</a></li><li class="chapter-item "><a href="../../../testing/ValocracyTestScenarios.html">Valocracy Test Scenarios</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="../../../index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item expanded "><a href="../../../src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item expanded "><a href="../../../src/interfaces/ITreasury.sol/interface.ITreasury.html" class="active">ITreasury</a></li><li class="chapter-item "><a href="../../../src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="../../../src/math/index.html">❱ math</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../src/math/SafeCast.sol/library.SafeCast.html">SafeCast</a></li></ol></li><li class="chapter-item "><a href="../../../src/mocks/index.html">❱ mocks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../src/mocks/MockERC20.sol/contract.MockERC20.html">MockERC20</a></li></ol></li><li class="chapter-item "><a href="../../../src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="../../../src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="../../../src/Valocracy.sol/error.TokenSoulbound.html">TokenSoulbound</a></li><li class="chapter-item "><a href="../../../src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -180,40 +180,87 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="itreasury"><a class="header" href="#itreasury">ITreasury</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/interfaces/ITreasury.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/interfaces/ITreasury.sol">Git Source</a></p>
 <h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
 <h3 id="asset"><a class="header" href="#asset">asset</a></h3>
-<p><em>Returns the address of the underlying token used for the Vault
+<p><em>Returns the address of the single underlying asset token used by the treasury
 for accounting, depositing, and withdrawing.</em></p>
-<pre><code class="language-solidity">function asset() external view returns (address assetTokenAddress);
+<pre><code class="language-solidity">function asset() external view returns (address);
 </code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>address</code></td><td>The address of the underlying asset token</td></tr>
+</tbody></table>
+</div>
 <h3 id="totalassets"><a class="header" href="#totalassets">totalAssets</a></h3>
-<p><em>Returns the total amount of the underlying asset that is “managed”
-by Vault.</em></p>
-<pre><code class="language-solidity">function totalAssets() external view returns (uint256 totalManagedAssets);
+<p><em>Returns the total amount of the single underlying asset that is managed by the treasury.</em></p>
+<pre><code class="language-solidity">function totalAssets() external view returns (uint256);
 </code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The total amount of the underlying asset</td></tr>
+</tbody></table>
+</div>
 <h3 id="previewwithdraw"><a class="header" href="#previewwithdraw">previewWithdraw</a></h3>
-<p><em>Returns the amount of the underlying asset that would be returned
-from withdrawing the given amount of shares.</em></p>
-<pre><code class="language-solidity">function previewWithdraw(uint256 shares) external view returns (uint256 assets);
+<p><em>Calculates the amount of the underlying asset that would be returned
+from burning the given amount of shares.</em></p>
+<pre><code class="language-solidity">function previewWithdraw(uint256 shares) external view returns (uint256);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to calculate assets for</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The amount of underlying asset that would be returned</td></tr>
+</tbody></table>
+</div>
 <h3 id="deposit"><a class="header" href="#deposit">deposit</a></h3>
-<p><em>Deposits the given amount of shares into the Vault.</em></p>
+<p><em>Deposits the underlying asset into the treasury and mints shares to the receiver.
+Only callable by the Valocracy contract.</em></p>
 <pre><code class="language-solidity">function deposit(address receiver, uint256 shares) external;
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that will receive the shares</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to mint</td></tr>
+</tbody></table>
+</div>
 <h3 id="withdraw"><a class="header" href="#withdraw">withdraw</a></h3>
-<p><em>Withdraws the given amount of shares from the Vault.</em></p>
+<p><em>Withdraws the underlying asset from the treasury by burning shares.
+Transfers the corresponding amount of the underlying asset to the receiver.</em></p>
 <pre><code class="language-solidity">function withdraw(address receiver, uint256 shares) external;
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that will receive the underlying asset</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to burn</td></tr>
+</tbody></table>
+</div>
 <h2 id="events"><a class="header" href="#events">Events</a></h2>
 <h3 id="deposit-1"><a class="header" href="#deposit-1">Deposit</a></h3>
-<p><em>Emitted when a new deposit of shares is made.</em></p>
+<p><em>Emitted when a new deposit of the underlying asset is made.</em></p>
 <pre><code class="language-solidity">event Deposit(address indexed receiver, uint256 shares);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that received the shares</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares minted</td></tr>
+</tbody></table>
+</div>
 <h3 id="withdraw-1"><a class="header" href="#withdraw-1">Withdraw</a></h3>
-<p><em>Emitted when a withdrawal of shares is made.</em></p>
+<p><em>Emitted when a withdrawal of the underlying asset is made.</em></p>
 <pre><code class="language-solidity">event Withdraw(address indexed owner, address indexed receiver, uint256 assets, uint256 shares);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>owner</code></td><td><code>address</code></td><td>The address that burned the shares</td></tr>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that received the underlying asset</td></tr>
+<tr><td><code>assets</code></td><td><code>uint256</code></td><td>The amount of underlying asset withdrawn</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares burned</td></tr>
+</tbody></table>
+</div>
 <h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
 <h3 id="notauthorized"><a class="header" href="#notauthorized">NotAuthorized</a></h3>
 <p><em>Emitted when a non-authorized account attempts to call a function.</em></p>

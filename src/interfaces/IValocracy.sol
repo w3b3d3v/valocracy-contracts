@@ -3,115 +3,59 @@ pragma solidity ^0.8.19;
 
 interface IValocracy {
     /**
-     * @dev Emitted when a soulbound token is attemps to be transferred to
-     * another account that is not the zero address.
+     * @dev Emitted when attempting to transfer a soulbound token.
      */
     error TokenSoulbound();
 
     /**
-     * @dev Emitted when a valor is updated or introduced.
+     * @dev Emitted when voting units are granted to an account.
+     * @param account The address that received the voting units
+     * @param amount The amount of voting units granted
      */
-    event Mint(address indexed account, uint256 indexed valorId);
+    event VotingUnitsGranted(address indexed account, uint256 amount);
 
     /**
-     * @dev Emitted when a valor is updated or introduced.
+     * @dev Emitted when voting units are burned.
+     * @param account The address that burned the voting units
+     * @param amount The amount of voting units burned
      */
-    event ValorUpdate(uint256 indexed valorId, uint256 rarity, string metadata);
+    event VotingUnitsBurned(address indexed account, uint256 amount);
 
     /**
-     * @dev Emitted when the Governor contract address is updated.
+     * @dev Returns the balance of an account with decay applied.
+     * Implements the EIP-7787 decay mechanism:
+     * - Full balance during stable period
+     * - Linear decay during decay period
+     * - Zero balance after decay period ends
+     * @param account The address to check the balance for
+     * @return The current balance with decay applied
      */
-    event GovernorUpdate(address indexed governor);
+    function balanceOf(address account) external view returns (uint256);
 
     /**
-     * @dev Emitted when the treasury contract address is updated.
+     * @dev Returns the stable period duration in seconds.
+     * @return The stable period duration
      */
-    event TreasuryUpdate(address indexed treasury);
+    function stablePeriod() external view returns (uint256);
 
     /**
-     * @dev Return the Governor contract address.
-     *
-     * The Governor contract must be provided by calling {setGovernor}.
-     * Otherwise {Governance-vote} will revert.
+     * @dev Returns the decay period duration in seconds.
+     * @return The decay period duration
      */
-    function governor() external view returns (address);
+    function decayPeriod() external view returns (uint256);
 
     /**
-     * @dev Return the Treasury contract address.
-     *
-     * The Treasury contract must be provided by calling {setTreasury}.
-     * Otherwise {Valocracy-mint} will revert.
+     * @dev Grants voting units to the specified account.
+     * Only the contract owner can mint new tokens and grant additional voting units.
+     * Updates the last participation timestamp to start the stable period.
+     * @param to The address to grant voting units to
+     * @param amount The amount of voting units to grant
      */
-    function treasury() external view returns (address);
+    function grantVotingUnits(address to, uint256 amount) external;
 
     /**
-     * @dev Return the total supply of NFTs in this contract.
+     * @dev Burns tokens and reduces the voting units associated with the token holder.
+     * @param amount The amount of tokens to burn
      */
-    function totalSupply() external view returns (uint256);
-
-    /**
-     * @dev Mints a new NFT.
-     *
-     * The level will be set to the level of the sender plus the rarity of the
-     * valor. If the account is on vacancy, the level will be set to the rarity
-     * of the valor. The expiration will be set to the current timestamp plus
-     * the vacancy period.
-     *
-     * Requirements:
-     *
-     * - `valorId` must exist.
-     * - `expiration` must be in the future.
-     *
-     * Emits a {Mint} event.
-     */
-    function mint(address account, uint256 valorId) external;
-
-    /**
-     * @dev Burn the given token ID.
-     *
-     * Requirements:
-     *
-     * - `tokenId` must exist.
-     * - `msg.sender` must be the owner of the token.
-     *
-     * Emits a {Transfer} event to the Zero Address.
-     */
-    function burn(uint256 tokenId) external;
-
-    /**
-     * @dev Create a new Valor for the protocol.
-     *
-     * Valor is a NFT that represents governance power. Their characteristics
-     * are its rarity and metadata. The rarity will determine the level of
-     * governance power and the metadata will be for off-chain display.
-     *
-     * Requirements:
-     *
-     * - `msg.sender` must be the owner of the contract.
-     *
-     * Emits a {NewValor} event.
-     */
-    function setValor(
-        uint256 valorId,
-        uint64 rarity,
-        string memory metadata
-    ) external;
-
-    /**
-     * @dev Set the Treasury contract address.
-     *
-     * Requirements:
-     *
-     * - `msg.sender` must be the owner of the contract.
-     */
-    function setTreasury(address treasury_) external;
-
-    /**
-     * @dev Set the Governor contract address.
-     *
-     * Requirements:
-     *
-     * - `msg.sender` must be the owner of the contract.
-     */
-    function setGovernor(address governor_) external;
+    function burn(uint256 amount) external;
 }

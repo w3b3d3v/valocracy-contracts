@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item affix "><li class="part-title">testing</li><li class="chapter-item "><a href="testing/index.html">❱ testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li><li class="chapter-item "><a href="testing/ValocracyTestCoverage.html">Valocracy Test Coverage</a></li><li class="chapter-item "><a href="testing/ValocracyTestScenarios.html">Valocracy Test Scenarios</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="src/math/index.html">❱ math</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/math/SafeCast.sol/library.SafeCast.html">SafeCast</a></li></ol></li><li class="chapter-item "><a href="src/mocks/index.html">❱ mocks</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/mocks/MockERC20.sol/contract.MockERC20.html">MockERC20</a></li></ol></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/error.TokenSoulbound.html">TokenSoulbound</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -211,67 +211,10 @@
 <li><strong>SDG.sol</strong>: Implements the <a href="https://eips.ethereum.org/EIPS/eip-7787">IERC7787</a> for Soulbound Degradable Governance</li>
 <li><strong>Interfaces/</strong>: Contains the core interfaces for the system</li>
 </ul>
-<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
-<p>We welcome contributions from the community! Here's how you can get involved:</p>
-<ol>
-<li>Join our Discord community at <a href="https://discord.w3d.community">discord.w3d.community</a></li>
-<li>Fork the repository and create a new branch</li>
-<li>Submit a pull request</li>
-</ol>
 <h2 id="learn-more"><a class="header" href="#learn-more">Learn More</a></h2>
 <p>For a deeper understanding of Valocracy's principles and vision, please read our <a href="https://valocracy.xyz/en/read-the-manifesto">Manifesto</a>.</p>
-<hr />
-<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
-<h3 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h3>
-<ul>
-<li>Foundry (see Foundry section below)</li>
-</ul>
-<h3 id="installation"><a class="header" href="#installation">Installation</a></h3>
-<pre><code class="language-bash"># Clone the repository
-git clone https://github.com/your-org/valocracy-contracts.git
-cd valocracy-contracts
-
-# Install dependencies
-forge install
-</code></pre>
-<h2 id="foundry"><a class="header" href="#foundry">Foundry</a></h2>
-<p><strong>Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.</strong></p>
-<p>Foundry consists of:</p>
-<ul>
-<li><strong>Forge</strong>: Ethereum testing framework (like Truffle, Hardhat and DappTools).</li>
-<li><strong>Cast</strong>: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.</li>
-<li><strong>Anvil</strong>: Local Ethereum node, akin to Ganache, Hardhat Network.</li>
-<li><strong>Chisel</strong>: Fast, utilitarian, and verbose solidity REPL.</li>
-</ul>
-<h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
-<p>https://book.getfoundry.sh/</p>
-<h3 id="usage"><a class="header" href="#usage">Usage</a></h3>
-<h4 id="build"><a class="header" href="#build">Build</a></h4>
-<pre><code class="language-shell">$ forge build
-</code></pre>
-<h4 id="test"><a class="header" href="#test">Test</a></h4>
-<pre><code class="language-shell">$ forge test
-</code></pre>
-<h4 id="format"><a class="header" href="#format">Format</a></h4>
-<pre><code class="language-shell">$ forge fmt
-</code></pre>
-<h4 id="gas-snapshots"><a class="header" href="#gas-snapshots">Gas Snapshots</a></h4>
-<pre><code class="language-shell">$ forge snapshot
-</code></pre>
-<h4 id="anvil"><a class="header" href="#anvil">Anvil</a></h4>
-<pre><code class="language-shell">$ anvil
-</code></pre>
-<h4 id="deploy"><a class="header" href="#deploy">Deploy</a></h4>
-<pre><code class="language-shell">$ forge script script/Counter.s.sol:CounterScript --rpc-url &lt;your_rpc_url&gt; --private-key &lt;your_private_key&gt;
-</code></pre>
-<h4 id="cast"><a class="header" href="#cast">Cast</a></h4>
-<pre><code class="language-shell">$ cast &lt;subcommand&gt;
-</code></pre>
-<h4 id="help"><a class="header" href="#help">Help</a></h4>
-<pre><code class="language-shell">$ forge --help
-$ anvil --help
-$ cast --help
-</code></pre>
+<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<p>Please see our <a href="CONTRIBUTING.html">CONTRIBUTING.md</a> for details on how to contribute to this project.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="contents"><a class="header" href="#contents">Contents</a></h1>
 <ul>
 <li><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li>
@@ -279,7 +222,7 @@ $ cast --help
 <li><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ierc7787"><a class="header" href="#ierc7787">IERC7787</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/interfaces/IERC7787.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/interfaces/IERC7787.sol">Git Source</a></p>
 <h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
 <h3 id="stableperiod"><a class="header" href="#stableperiod">stablePeriod</a></h3>
 <p><em>Returns the grace period duration before the voting units begins decaying. This period is
@@ -306,141 +249,945 @@ period is fixed to 90 days. But it can be overridden in derived contracts.</em><
 <pre><code class="language-solidity">function accountStats(address account) external view returns (uint32);
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="itreasury"><a class="header" href="#itreasury">ITreasury</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/interfaces/ITreasury.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/interfaces/ITreasury.sol">Git Source</a></p>
 <h2 id="functions-1"><a class="header" href="#functions-1">Functions</a></h2>
 <h3 id="asset"><a class="header" href="#asset">asset</a></h3>
-<p><em>Returns the address of the underlying token used for the Vault
+<p><em>Returns the address of the single underlying asset token used by the treasury
 for accounting, depositing, and withdrawing.</em></p>
-<pre><code class="language-solidity">function asset() external view returns (address assetTokenAddress);
+<pre><code class="language-solidity">function asset() external view returns (address);
 </code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>address</code></td><td>The address of the underlying asset token</td></tr>
+</tbody></table>
+</div>
 <h3 id="totalassets"><a class="header" href="#totalassets">totalAssets</a></h3>
-<p><em>Returns the total amount of the underlying asset that is “managed”
-by Vault.</em></p>
-<pre><code class="language-solidity">function totalAssets() external view returns (uint256 totalManagedAssets);
+<p><em>Returns the total amount of the single underlying asset that is managed by the treasury.</em></p>
+<pre><code class="language-solidity">function totalAssets() external view returns (uint256);
 </code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The total amount of the underlying asset</td></tr>
+</tbody></table>
+</div>
 <h3 id="previewwithdraw"><a class="header" href="#previewwithdraw">previewWithdraw</a></h3>
-<p><em>Returns the amount of the underlying asset that would be returned
-from withdrawing the given amount of shares.</em></p>
-<pre><code class="language-solidity">function previewWithdraw(uint256 shares) external view returns (uint256 assets);
+<p><em>Calculates the amount of the underlying asset that would be returned
+from burning the given amount of shares.</em></p>
+<pre><code class="language-solidity">function previewWithdraw(uint256 shares) external view returns (uint256);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to calculate assets for</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The amount of underlying asset that would be returned</td></tr>
+</tbody></table>
+</div>
 <h3 id="deposit"><a class="header" href="#deposit">deposit</a></h3>
-<p><em>Deposits the given amount of shares into the Vault.</em></p>
+<p><em>Deposits the underlying asset into the treasury and mints shares to the receiver.
+Only callable by the Valocracy contract.</em></p>
 <pre><code class="language-solidity">function deposit(address receiver, uint256 shares) external;
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that will receive the shares</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to mint</td></tr>
+</tbody></table>
+</div>
 <h3 id="withdraw"><a class="header" href="#withdraw">withdraw</a></h3>
-<p><em>Withdraws the given amount of shares from the Vault.</em></p>
+<p><em>Withdraws the underlying asset from the treasury by burning shares.
+Transfers the corresponding amount of the underlying asset to the receiver.</em></p>
 <pre><code class="language-solidity">function withdraw(address receiver, uint256 shares) external;
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that will receive the underlying asset</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to burn</td></tr>
+</tbody></table>
+</div>
 <h2 id="events"><a class="header" href="#events">Events</a></h2>
 <h3 id="deposit-1"><a class="header" href="#deposit-1">Deposit</a></h3>
-<p><em>Emitted when a new deposit of shares is made.</em></p>
+<p><em>Emitted when a new deposit of the underlying asset is made.</em></p>
 <pre><code class="language-solidity">event Deposit(address indexed receiver, uint256 shares);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that received the shares</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares minted</td></tr>
+</tbody></table>
+</div>
 <h3 id="withdraw-1"><a class="header" href="#withdraw-1">Withdraw</a></h3>
-<p><em>Emitted when a withdrawal of shares is made.</em></p>
+<p><em>Emitted when a withdrawal of the underlying asset is made.</em></p>
 <pre><code class="language-solidity">event Withdraw(address indexed owner, address indexed receiver, uint256 assets, uint256 shares);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>owner</code></td><td><code>address</code></td><td>The address that burned the shares</td></tr>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that received the underlying asset</td></tr>
+<tr><td><code>assets</code></td><td><code>uint256</code></td><td>The amount of underlying asset withdrawn</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares burned</td></tr>
+</tbody></table>
+</div>
 <h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
 <h3 id="notauthorized"><a class="header" href="#notauthorized">NotAuthorized</a></h3>
 <p><em>Emitted when a non-authorized account attempts to call a function.</em></p>
 <pre><code class="language-solidity">error NotAuthorized(address caller);
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ivalocracy"><a class="header" href="#ivalocracy">IValocracy</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/interfaces/IValocracy.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/interfaces/IValocracy.sol">Git Source</a></p>
 <h2 id="functions-2"><a class="header" href="#functions-2">Functions</a></h2>
-<h3 id="governor"><a class="header" href="#governor">governor</a></h3>
-<p><em>Return the Governor contract address.
-The Governor contract must be provided by calling <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#setgovernor">setGovernor</a>.
-Otherwise {Governance-vote} will revert.</em></p>
-<pre><code class="language-solidity">function governor() external view returns (address);
-</code></pre>
-<h3 id="treasury"><a class="header" href="#treasury">treasury</a></h3>
-<p><em>Return the Treasury contract address.
-The Treasury contract must be provided by calling <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#settreasury">setTreasury</a>.
-Otherwise {Valocracy-mint} will revert.</em></p>
-<pre><code class="language-solidity">function treasury() external view returns (address);
-</code></pre>
-<h3 id="totalsupply"><a class="header" href="#totalsupply">totalSupply</a></h3>
-<p><em>Return the total supply of NFTs in this contract.</em></p>
-<pre><code class="language-solidity">function totalSupply() external view returns (uint256);
-</code></pre>
-<h3 id="mint"><a class="header" href="#mint">mint</a></h3>
-<p>*Mints a new NFT.
-The level will be set to the level of the sender plus the rarity of the
-valor. If the account is on vacancy, the level will be set to the rarity
-of the valor. The expiration will be set to the current timestamp plus
-the vacancy period.
-Requirements:</p>
+<h3 id="balanceof"><a class="header" href="#balanceof">balanceOf</a></h3>
+<p>*Returns the balance of an account with decay applied.
+Implements the EIP-7787 decay mechanism:</p>
 <ul>
-<li><code>valorId</code> must exist.</li>
-<li><code>expiration</code> must be in the future.
-Emits a <a href="src/interfaces/IValocracy.sol//src/interfaces/IValocracy.sol/interface.IValocracy.html#mint">Mint</a> event.*</li>
+<li>Full balance during stable period</li>
+<li>Linear decay during decay period</li>
+<li>Zero balance after decay period ends*</li>
 </ul>
-<pre><code class="language-solidity">function mint(address account, uint256 valorId) external;
+<pre><code class="language-solidity">function balanceOf(address account) external view returns (uint256);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>account</code></td><td><code>address</code></td><td>The address to check the balance for</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The current balance with decay applied</td></tr>
+</tbody></table>
+</div>
+<h3 id="stableperiod-1"><a class="header" href="#stableperiod-1">stablePeriod</a></h3>
+<p><em>Returns the stable period duration in seconds.</em></p>
+<pre><code class="language-solidity">function stablePeriod() external view returns (uint256);
+</code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The stable period duration</td></tr>
+</tbody></table>
+</div>
+<h3 id="decayperiod-1"><a class="header" href="#decayperiod-1">decayPeriod</a></h3>
+<p><em>Returns the decay period duration in seconds.</em></p>
+<pre><code class="language-solidity">function decayPeriod() external view returns (uint256);
+</code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The decay period duration</td></tr>
+</tbody></table>
+</div>
+<h3 id="grantvotingunits"><a class="header" href="#grantvotingunits">grantVotingUnits</a></h3>
+<p><em>Grants voting units to the specified account.
+Only the contract owner can mint new tokens and grant additional voting units.
+Updates the last participation timestamp to start the stable period.</em></p>
+<pre><code class="language-solidity">function grantVotingUnits(address to, uint256 amount) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>to</code></td><td><code>address</code></td><td>The address to grant voting units to</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of voting units to grant</td></tr>
+</tbody></table>
+</div>
 <h3 id="burn"><a class="header" href="#burn">burn</a></h3>
-<p>*Burn the given token ID.
-Requirements:</p>
-<ul>
-<li><code>tokenId</code> must exist.</li>
-<li><code>msg.sender</code> must be the owner of the token.
-Emits a {Transfer} event to the Zero Address.*</li>
-</ul>
-<pre><code class="language-solidity">function burn(uint256 tokenId) external;
+<p><em>Burns tokens and reduces the voting units associated with the token holder.</em></p>
+<pre><code class="language-solidity">function burn(uint256 amount) external;
 </code></pre>
-<h3 id="setvalor"><a class="header" href="#setvalor">setValor</a></h3>
-<p>*Create a new Valor for the protocol.
-Valor is a NFT that represents governance power. Their characteristics
-are its rarity and metadata. The rarity will determine the level of
-governance power and the metadata will be for off-chain display.
-Requirements:</p>
-<ul>
-<li><code>msg.sender</code> must be the owner of the contract.
-Emits a {NewValor} event.*</li>
-</ul>
-<pre><code class="language-solidity">function setValor(uint256 valorId, uint64 rarity, string memory metadata) external;
-</code></pre>
-<h3 id="settreasury"><a class="header" href="#settreasury">setTreasury</a></h3>
-<p>*Set the Treasury contract address.
-Requirements:</p>
-<ul>
-<li><code>msg.sender</code> must be the owner of the contract.*</li>
-</ul>
-<pre><code class="language-solidity">function setTreasury(address treasury_) external;
-</code></pre>
-<h3 id="setgovernor"><a class="header" href="#setgovernor">setGovernor</a></h3>
-<p>*Set the Governor contract address.
-Requirements:</p>
-<ul>
-<li><code>msg.sender</code> must be the owner of the contract.*</li>
-</ul>
-<pre><code class="language-solidity">function setGovernor(address governor_) external;
-</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens to burn</td></tr>
+</tbody></table>
+</div>
 <h2 id="events-1"><a class="header" href="#events-1">Events</a></h2>
-<h3 id="mint-1"><a class="header" href="#mint-1">Mint</a></h3>
-<p><em>Emitted when a valor is updated or introduced.</em></p>
-<pre><code class="language-solidity">event Mint(address indexed account, uint256 indexed valorId);
+<h3 id="votingunitsgranted"><a class="header" href="#votingunitsgranted">VotingUnitsGranted</a></h3>
+<p><em>Emitted when voting units are granted to an account.</em></p>
+<pre><code class="language-solidity">event VotingUnitsGranted(address indexed account, uint256 amount);
 </code></pre>
-<h3 id="valorupdate"><a class="header" href="#valorupdate">ValorUpdate</a></h3>
-<p><em>Emitted when a valor is updated or introduced.</em></p>
-<pre><code class="language-solidity">event ValorUpdate(uint256 indexed valorId, uint256 rarity, string metadata);
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>account</code></td><td><code>address</code></td><td>The address that received the voting units</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of voting units granted</td></tr>
+</tbody></table>
+</div>
+<h3 id="votingunitsburned"><a class="header" href="#votingunitsburned">VotingUnitsBurned</a></h3>
+<p><em>Emitted when voting units are burned.</em></p>
+<pre><code class="language-solidity">event VotingUnitsBurned(address indexed account, uint256 amount);
 </code></pre>
-<h3 id="governorupdate"><a class="header" href="#governorupdate">GovernorUpdate</a></h3>
-<p><em>Emitted when the Governor contract address is updated.</em></p>
-<pre><code class="language-solidity">event GovernorUpdate(address indexed governor);
-</code></pre>
-<h3 id="treasuryupdate"><a class="header" href="#treasuryupdate">TreasuryUpdate</a></h3>
-<p><em>Emitted when the treasury contract address is updated.</em></p>
-<pre><code class="language-solidity">event TreasuryUpdate(address indexed treasury);
-</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>account</code></td><td><code>address</code></td><td>The address that burned the voting units</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of voting units burned</td></tr>
+</tbody></table>
+</div>
 <h2 id="errors-1"><a class="header" href="#errors-1">Errors</a></h2>
 <h3 id="tokensoulbound"><a class="header" href="#tokensoulbound">TokenSoulbound</a></h3>
-<p><em>Emitted when a soulbound token is attemps to be transferred to
-another account that is not the zero address.</em></p>
+<p><em>Emitted when attempting to transfer a soulbound token.</em></p>
 <pre><code class="language-solidity">error TokenSoulbound();
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents-1"><a class="header" href="#contents-1">Contents</a></h1>
+<ul>
+<li><a href="src/math/SafeCast.sol/library.SafeCast.html">SafeCast</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="safecast"><a class="header" href="#safecast">SafeCast</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/math/SafeCast.sol">Git Source</a></p>
+<p><em>Wrappers over Solidity's uintXX/intXX casting operators with added overflow
+checks.
+Downcasting from uint256/int256 in Solidity does not revert on overflow. This can
+easily result in undesired exploitation or bugs, since developers usually
+assume that overflows raise errors. <code>SafeCast</code> restores this intuition by
+reverting the transaction when such an operation overflows.
+Using this library instead of the unchecked operations eliminates an entire
+class of bugs, so it's recommended to use it always.
+Can be combined with {SafeMath} and {SignedSafeMath} to extend it to smaller types, by performing
+all math on <code>uint256</code> and <code>int256</code> and then downcasting.</em></p>
+<h2 id="functions-3"><a class="header" href="#functions-3">Functions</a></h2>
+<h3 id="touint248"><a class="header" href="#touint248">toUint248</a></h3>
+<p>*Returns the downcasted uint248 from uint256, reverting on
+overflow (when the input is greater than largest uint248).
+Counterpart to Solidity's <code>uint248</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 248 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint248(uint256 value) internal pure returns (uint248);
+</code></pre>
+<h3 id="touint240"><a class="header" href="#touint240">toUint240</a></h3>
+<p>*Returns the downcasted uint240 from uint256, reverting on
+overflow (when the input is greater than largest uint240).
+Counterpart to Solidity's <code>uint240</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 240 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint240(uint256 value) internal pure returns (uint240);
+</code></pre>
+<h3 id="touint232"><a class="header" href="#touint232">toUint232</a></h3>
+<p>*Returns the downcasted uint232 from uint256, reverting on
+overflow (when the input is greater than largest uint232).
+Counterpart to Solidity's <code>uint232</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 232 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint232(uint256 value) internal pure returns (uint232);
+</code></pre>
+<h3 id="touint224"><a class="header" href="#touint224">toUint224</a></h3>
+<p>*Returns the downcasted uint224 from uint256, reverting on
+overflow (when the input is greater than largest uint224).
+Counterpart to Solidity's <code>uint224</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 224 bits
+<em>Available since v4.2.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint224(uint256 value) internal pure returns (uint224);
+</code></pre>
+<h3 id="touint216"><a class="header" href="#touint216">toUint216</a></h3>
+<p>*Returns the downcasted uint216 from uint256, reverting on
+overflow (when the input is greater than largest uint216).
+Counterpart to Solidity's <code>uint216</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 216 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint216(uint256 value) internal pure returns (uint216);
+</code></pre>
+<h3 id="touint208"><a class="header" href="#touint208">toUint208</a></h3>
+<p>*Returns the downcasted uint208 from uint256, reverting on
+overflow (when the input is greater than largest uint208).
+Counterpart to Solidity's <code>uint208</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 208 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint208(uint256 value) internal pure returns (uint208);
+</code></pre>
+<h3 id="touint200"><a class="header" href="#touint200">toUint200</a></h3>
+<p>*Returns the downcasted uint200 from uint256, reverting on
+overflow (when the input is greater than largest uint200).
+Counterpart to Solidity's <code>uint200</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 200 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint200(uint256 value) internal pure returns (uint200);
+</code></pre>
+<h3 id="touint192"><a class="header" href="#touint192">toUint192</a></h3>
+<p>*Returns the downcasted uint192 from uint256, reverting on
+overflow (when the input is greater than largest uint192).
+Counterpart to Solidity's <code>uint192</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 192 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint192(uint256 value) internal pure returns (uint192);
+</code></pre>
+<h3 id="touint184"><a class="header" href="#touint184">toUint184</a></h3>
+<p>*Returns the downcasted uint184 from uint256, reverting on
+overflow (when the input is greater than largest uint184).
+Counterpart to Solidity's <code>uint184</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 184 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint184(uint256 value) internal pure returns (uint184);
+</code></pre>
+<h3 id="touint176"><a class="header" href="#touint176">toUint176</a></h3>
+<p>*Returns the downcasted uint176 from uint256, reverting on
+overflow (when the input is greater than largest uint176).
+Counterpart to Solidity's <code>uint176</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 176 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint176(uint256 value) internal pure returns (uint176);
+</code></pre>
+<h3 id="touint168"><a class="header" href="#touint168">toUint168</a></h3>
+<p>*Returns the downcasted uint168 from uint256, reverting on
+overflow (when the input is greater than largest uint168).
+Counterpart to Solidity's <code>uint168</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 168 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint168(uint256 value) internal pure returns (uint168);
+</code></pre>
+<h3 id="touint160"><a class="header" href="#touint160">toUint160</a></h3>
+<p>*Returns the downcasted uint160 from uint256, reverting on
+overflow (when the input is greater than largest uint160).
+Counterpart to Solidity's <code>uint160</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 160 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint160(uint256 value) internal pure returns (uint160);
+</code></pre>
+<h3 id="touint152"><a class="header" href="#touint152">toUint152</a></h3>
+<p>*Returns the downcasted uint152 from uint256, reverting on
+overflow (when the input is greater than largest uint152).
+Counterpart to Solidity's <code>uint152</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 152 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint152(uint256 value) internal pure returns (uint152);
+</code></pre>
+<h3 id="touint144"><a class="header" href="#touint144">toUint144</a></h3>
+<p>*Returns the downcasted uint144 from uint256, reverting on
+overflow (when the input is greater than largest uint144).
+Counterpart to Solidity's <code>uint144</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 144 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint144(uint256 value) internal pure returns (uint144);
+</code></pre>
+<h3 id="touint136"><a class="header" href="#touint136">toUint136</a></h3>
+<p>*Returns the downcasted uint136 from uint256, reverting on
+overflow (when the input is greater than largest uint136).
+Counterpart to Solidity's <code>uint136</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 136 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint136(uint256 value) internal pure returns (uint136);
+</code></pre>
+<h3 id="touint128"><a class="header" href="#touint128">toUint128</a></h3>
+<p>*Returns the downcasted uint128 from uint256, reverting on
+overflow (when the input is greater than largest uint128).
+Counterpart to Solidity's <code>uint128</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 128 bits
+<em>Available since v2.5.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint128(uint256 value) internal pure returns (uint128);
+</code></pre>
+<h3 id="touint120"><a class="header" href="#touint120">toUint120</a></h3>
+<p>*Returns the downcasted uint120 from uint256, reverting on
+overflow (when the input is greater than largest uint120).
+Counterpart to Solidity's <code>uint120</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 120 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint120(uint256 value) internal pure returns (uint120);
+</code></pre>
+<h3 id="touint112"><a class="header" href="#touint112">toUint112</a></h3>
+<p>*Returns the downcasted uint112 from uint256, reverting on
+overflow (when the input is greater than largest uint112).
+Counterpart to Solidity's <code>uint112</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 112 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint112(uint256 value) internal pure returns (uint112);
+</code></pre>
+<h3 id="touint104"><a class="header" href="#touint104">toUint104</a></h3>
+<p>*Returns the downcasted uint104 from uint256, reverting on
+overflow (when the input is greater than largest uint104).
+Counterpart to Solidity's <code>uint104</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 104 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint104(uint256 value) internal pure returns (uint104);
+</code></pre>
+<h3 id="touint96"><a class="header" href="#touint96">toUint96</a></h3>
+<p>*Returns the downcasted uint96 from uint256, reverting on
+overflow (when the input is greater than largest uint96).
+Counterpart to Solidity's <code>uint96</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 96 bits
+<em>Available since v4.2.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint96(uint256 value) internal pure returns (uint96);
+</code></pre>
+<h3 id="touint88"><a class="header" href="#touint88">toUint88</a></h3>
+<p>*Returns the downcasted uint88 from uint256, reverting on
+overflow (when the input is greater than largest uint88).
+Counterpart to Solidity's <code>uint88</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 88 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint88(uint256 value) internal pure returns (uint88);
+</code></pre>
+<h3 id="touint80"><a class="header" href="#touint80">toUint80</a></h3>
+<p>*Returns the downcasted uint80 from uint256, reverting on
+overflow (when the input is greater than largest uint80).
+Counterpart to Solidity's <code>uint80</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 80 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint80(uint256 value) internal pure returns (uint80);
+</code></pre>
+<h3 id="touint72"><a class="header" href="#touint72">toUint72</a></h3>
+<p>*Returns the downcasted uint72 from uint256, reverting on
+overflow (when the input is greater than largest uint72).
+Counterpart to Solidity's <code>uint72</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 72 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint72(uint256 value) internal pure returns (uint72);
+</code></pre>
+<h3 id="touint64"><a class="header" href="#touint64">toUint64</a></h3>
+<p>*Returns the downcasted uint64 from uint256, reverting on
+overflow (when the input is greater than largest uint64).
+Counterpart to Solidity's <code>uint64</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 64 bits
+<em>Available since v2.5.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint64(uint256 value) internal pure returns (uint64);
+</code></pre>
+<h3 id="touint56"><a class="header" href="#touint56">toUint56</a></h3>
+<p>*Returns the downcasted uint56 from uint256, reverting on
+overflow (when the input is greater than largest uint56).
+Counterpart to Solidity's <code>uint56</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 56 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint56(uint256 value) internal pure returns (uint56);
+</code></pre>
+<h3 id="touint48"><a class="header" href="#touint48">toUint48</a></h3>
+<p>*Returns the downcasted uint48 from uint256, reverting on
+overflow (when the input is greater than largest uint48).
+Counterpart to Solidity's <code>uint48</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 48 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint48(uint256 value) internal pure returns (uint48);
+</code></pre>
+<h3 id="touint40"><a class="header" href="#touint40">toUint40</a></h3>
+<p>*Returns the downcasted uint40 from uint256, reverting on
+overflow (when the input is greater than largest uint40).
+Counterpart to Solidity's <code>uint40</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 40 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint40(uint256 value) internal pure returns (uint40);
+</code></pre>
+<h3 id="touint32"><a class="header" href="#touint32">toUint32</a></h3>
+<p>*Returns the downcasted uint32 from uint256, reverting on
+overflow (when the input is greater than largest uint32).
+Counterpart to Solidity's <code>uint32</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 32 bits
+<em>Available since v2.5.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint32(uint256 value) internal pure returns (uint32);
+</code></pre>
+<h3 id="touint24"><a class="header" href="#touint24">toUint24</a></h3>
+<p>*Returns the downcasted uint24 from uint256, reverting on
+overflow (when the input is greater than largest uint24).
+Counterpart to Solidity's <code>uint24</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 24 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint24(uint256 value) internal pure returns (uint24);
+</code></pre>
+<h3 id="touint16"><a class="header" href="#touint16">toUint16</a></h3>
+<p>*Returns the downcasted uint16 from uint256, reverting on
+overflow (when the input is greater than largest uint16).
+Counterpart to Solidity's <code>uint16</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 16 bits
+<em>Available since v2.5.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint16(uint256 value) internal pure returns (uint16);
+</code></pre>
+<h3 id="touint8"><a class="header" href="#touint8">toUint8</a></h3>
+<p>*Returns the downcasted uint8 from uint256, reverting on
+overflow (when the input is greater than largest uint8).
+Counterpart to Solidity's <code>uint8</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 8 bits
+<em>Available since v2.5.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint8(uint256 value) internal pure returns (uint8);
+</code></pre>
+<h3 id="touint256"><a class="header" href="#touint256">toUint256</a></h3>
+<p>*Converts a signed int256 into an unsigned uint256.
+Requirements:</p>
+<ul>
+<li>input must be greater than or equal to 0.
+<em>Available since v3.0.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toUint256(int256 value) internal pure returns (uint256);
+</code></pre>
+<h3 id="toint248"><a class="header" href="#toint248">toInt248</a></h3>
+<p>*Returns the downcasted int248 from int256, reverting on
+overflow (when the input is less than smallest int248 or
+greater than largest int248).
+Counterpart to Solidity's <code>int248</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 248 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt248(int256 value) internal pure returns (int248 downcasted);
+</code></pre>
+<h3 id="toint240"><a class="header" href="#toint240">toInt240</a></h3>
+<p>*Returns the downcasted int240 from int256, reverting on
+overflow (when the input is less than smallest int240 or
+greater than largest int240).
+Counterpart to Solidity's <code>int240</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 240 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt240(int256 value) internal pure returns (int240 downcasted);
+</code></pre>
+<h3 id="toint232"><a class="header" href="#toint232">toInt232</a></h3>
+<p>*Returns the downcasted int232 from int256, reverting on
+overflow (when the input is less than smallest int232 or
+greater than largest int232).
+Counterpart to Solidity's <code>int232</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 232 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt232(int256 value) internal pure returns (int232 downcasted);
+</code></pre>
+<h3 id="toint224"><a class="header" href="#toint224">toInt224</a></h3>
+<p>*Returns the downcasted int224 from int256, reverting on
+overflow (when the input is less than smallest int224 or
+greater than largest int224).
+Counterpart to Solidity's <code>int224</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 224 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt224(int256 value) internal pure returns (int224 downcasted);
+</code></pre>
+<h3 id="toint216"><a class="header" href="#toint216">toInt216</a></h3>
+<p>*Returns the downcasted int216 from int256, reverting on
+overflow (when the input is less than smallest int216 or
+greater than largest int216).
+Counterpart to Solidity's <code>int216</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 216 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt216(int256 value) internal pure returns (int216 downcasted);
+</code></pre>
+<h3 id="toint208"><a class="header" href="#toint208">toInt208</a></h3>
+<p>*Returns the downcasted int208 from int256, reverting on
+overflow (when the input is less than smallest int208 or
+greater than largest int208).
+Counterpart to Solidity's <code>int208</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 208 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt208(int256 value) internal pure returns (int208 downcasted);
+</code></pre>
+<h3 id="toint200"><a class="header" href="#toint200">toInt200</a></h3>
+<p>*Returns the downcasted int200 from int256, reverting on
+overflow (when the input is less than smallest int200 or
+greater than largest int200).
+Counterpart to Solidity's <code>int200</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 200 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt200(int256 value) internal pure returns (int200 downcasted);
+</code></pre>
+<h3 id="toint192"><a class="header" href="#toint192">toInt192</a></h3>
+<p>*Returns the downcasted int192 from int256, reverting on
+overflow (when the input is less than smallest int192 or
+greater than largest int192).
+Counterpart to Solidity's <code>int192</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 192 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt192(int256 value) internal pure returns (int192 downcasted);
+</code></pre>
+<h3 id="toint184"><a class="header" href="#toint184">toInt184</a></h3>
+<p>*Returns the downcasted int184 from int256, reverting on
+overflow (when the input is less than smallest int184 or
+greater than largest int184).
+Counterpart to Solidity's <code>int184</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 184 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt184(int256 value) internal pure returns (int184 downcasted);
+</code></pre>
+<h3 id="toint176"><a class="header" href="#toint176">toInt176</a></h3>
+<p>*Returns the downcasted int176 from int256, reverting on
+overflow (when the input is less than smallest int176 or
+greater than largest int176).
+Counterpart to Solidity's <code>int176</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 176 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt176(int256 value) internal pure returns (int176 downcasted);
+</code></pre>
+<h3 id="toint168"><a class="header" href="#toint168">toInt168</a></h3>
+<p>*Returns the downcasted int168 from int256, reverting on
+overflow (when the input is less than smallest int168 or
+greater than largest int168).
+Counterpart to Solidity's <code>int168</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 168 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt168(int256 value) internal pure returns (int168 downcasted);
+</code></pre>
+<h3 id="toint160"><a class="header" href="#toint160">toInt160</a></h3>
+<p>*Returns the downcasted int160 from int256, reverting on
+overflow (when the input is less than smallest int160 or
+greater than largest int160).
+Counterpart to Solidity's <code>int160</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 160 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt160(int256 value) internal pure returns (int160 downcasted);
+</code></pre>
+<h3 id="toint152"><a class="header" href="#toint152">toInt152</a></h3>
+<p>*Returns the downcasted int152 from int256, reverting on
+overflow (when the input is less than smallest int152 or
+greater than largest int152).
+Counterpart to Solidity's <code>int152</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 152 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt152(int256 value) internal pure returns (int152 downcasted);
+</code></pre>
+<h3 id="toint144"><a class="header" href="#toint144">toInt144</a></h3>
+<p>*Returns the downcasted int144 from int256, reverting on
+overflow (when the input is less than smallest int144 or
+greater than largest int144).
+Counterpart to Solidity's <code>int144</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 144 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt144(int256 value) internal pure returns (int144 downcasted);
+</code></pre>
+<h3 id="toint136"><a class="header" href="#toint136">toInt136</a></h3>
+<p>*Returns the downcasted int136 from int256, reverting on
+overflow (when the input is less than smallest int136 or
+greater than largest int136).
+Counterpart to Solidity's <code>int136</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 136 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt136(int256 value) internal pure returns (int136 downcasted);
+</code></pre>
+<h3 id="toint128"><a class="header" href="#toint128">toInt128</a></h3>
+<p>*Returns the downcasted int128 from int256, reverting on
+overflow (when the input is less than smallest int128 or
+greater than largest int128).
+Counterpart to Solidity's <code>int128</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 128 bits
+<em>Available since v3.1.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt128(int256 value) internal pure returns (int128 downcasted);
+</code></pre>
+<h3 id="toint120"><a class="header" href="#toint120">toInt120</a></h3>
+<p>*Returns the downcasted int120 from int256, reverting on
+overflow (when the input is less than smallest int120 or
+greater than largest int120).
+Counterpart to Solidity's <code>int120</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 120 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt120(int256 value) internal pure returns (int120 downcasted);
+</code></pre>
+<h3 id="toint112"><a class="header" href="#toint112">toInt112</a></h3>
+<p>*Returns the downcasted int112 from int256, reverting on
+overflow (when the input is less than smallest int112 or
+greater than largest int112).
+Counterpart to Solidity's <code>int112</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 112 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt112(int256 value) internal pure returns (int112 downcasted);
+</code></pre>
+<h3 id="toint104"><a class="header" href="#toint104">toInt104</a></h3>
+<p>*Returns the downcasted int104 from int256, reverting on
+overflow (when the input is less than smallest int104 or
+greater than largest int104).
+Counterpart to Solidity's <code>int104</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 104 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt104(int256 value) internal pure returns (int104 downcasted);
+</code></pre>
+<h3 id="toint96"><a class="header" href="#toint96">toInt96</a></h3>
+<p>*Returns the downcasted int96 from int256, reverting on
+overflow (when the input is less than smallest int96 or
+greater than largest int96).
+Counterpart to Solidity's <code>int96</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 96 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt96(int256 value) internal pure returns (int96 downcasted);
+</code></pre>
+<h3 id="toint88"><a class="header" href="#toint88">toInt88</a></h3>
+<p>*Returns the downcasted int88 from int256, reverting on
+overflow (when the input is less than smallest int88 or
+greater than largest int88).
+Counterpart to Solidity's <code>int88</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 88 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt88(int256 value) internal pure returns (int88 downcasted);
+</code></pre>
+<h3 id="toint80"><a class="header" href="#toint80">toInt80</a></h3>
+<p>*Returns the downcasted int80 from int256, reverting on
+overflow (when the input is less than smallest int80 or
+greater than largest int80).
+Counterpart to Solidity's <code>int80</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 80 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt80(int256 value) internal pure returns (int80 downcasted);
+</code></pre>
+<h3 id="toint72"><a class="header" href="#toint72">toInt72</a></h3>
+<p>*Returns the downcasted int72 from int256, reverting on
+overflow (when the input is less than smallest int72 or
+greater than largest int72).
+Counterpart to Solidity's <code>int72</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 72 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt72(int256 value) internal pure returns (int72 downcasted);
+</code></pre>
+<h3 id="toint64"><a class="header" href="#toint64">toInt64</a></h3>
+<p>*Returns the downcasted int64 from int256, reverting on
+overflow (when the input is less than smallest int64 or
+greater than largest int64).
+Counterpart to Solidity's <code>int64</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 64 bits
+<em>Available since v3.1.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt64(int256 value) internal pure returns (int64 downcasted);
+</code></pre>
+<h3 id="toint56"><a class="header" href="#toint56">toInt56</a></h3>
+<p>*Returns the downcasted int56 from int256, reverting on
+overflow (when the input is less than smallest int56 or
+greater than largest int56).
+Counterpart to Solidity's <code>int56</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 56 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt56(int256 value) internal pure returns (int56 downcasted);
+</code></pre>
+<h3 id="toint48"><a class="header" href="#toint48">toInt48</a></h3>
+<p>*Returns the downcasted int48 from int256, reverting on
+overflow (when the input is less than smallest int48 or
+greater than largest int48).
+Counterpart to Solidity's <code>int48</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 48 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt48(int256 value) internal pure returns (int48 downcasted);
+</code></pre>
+<h3 id="toint40"><a class="header" href="#toint40">toInt40</a></h3>
+<p>*Returns the downcasted int40 from int256, reverting on
+overflow (when the input is less than smallest int40 or
+greater than largest int40).
+Counterpart to Solidity's <code>int40</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 40 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt40(int256 value) internal pure returns (int40 downcasted);
+</code></pre>
+<h3 id="toint32"><a class="header" href="#toint32">toInt32</a></h3>
+<p>*Returns the downcasted int32 from int256, reverting on
+overflow (when the input is less than smallest int32 or
+greater than largest int32).
+Counterpart to Solidity's <code>int32</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 32 bits
+<em>Available since v3.1.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt32(int256 value) internal pure returns (int32 downcasted);
+</code></pre>
+<h3 id="toint24"><a class="header" href="#toint24">toInt24</a></h3>
+<p>*Returns the downcasted int24 from int256, reverting on
+overflow (when the input is less than smallest int24 or
+greater than largest int24).
+Counterpart to Solidity's <code>int24</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 24 bits
+<em>Available since v4.7.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt24(int256 value) internal pure returns (int24 downcasted);
+</code></pre>
+<h3 id="toint16"><a class="header" href="#toint16">toInt16</a></h3>
+<p>*Returns the downcasted int16 from int256, reverting on
+overflow (when the input is less than smallest int16 or
+greater than largest int16).
+Counterpart to Solidity's <code>int16</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 16 bits
+<em>Available since v3.1.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt16(int256 value) internal pure returns (int16 downcasted);
+</code></pre>
+<h3 id="toint8"><a class="header" href="#toint8">toInt8</a></h3>
+<p>*Returns the downcasted int8 from int256, reverting on
+overflow (when the input is less than smallest int8 or
+greater than largest int8).
+Counterpart to Solidity's <code>int8</code> operator.
+Requirements:</p>
+<ul>
+<li>input must fit into 8 bits
+<em>Available since v3.1.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt8(int256 value) internal pure returns (int8 downcasted);
+</code></pre>
+<h3 id="toint256"><a class="header" href="#toint256">toInt256</a></h3>
+<p>*Converts an unsigned uint256 into a signed int256.
+Requirements:</p>
+<ul>
+<li>input must be less than or equal to maxInt256.
+<em>Available since v3.0.</em>*</li>
+</ul>
+<pre><code class="language-solidity">function toInt256(uint256 value) internal pure returns (int256);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents-2"><a class="header" href="#contents-2">Contents</a></h1>
+<ul>
+<li><a href="src/mocks/MockERC20.sol/contract.MockERC20.html">MockERC20</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mockerc20"><a class="header" href="#mockerc20">MockERC20</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/mocks/MockERC20.sol">Git Source</a></p>
+<p><strong>Inherits:</strong>
+ERC20</p>
+<h2 id="functions-4"><a class="header" href="#functions-4">Functions</a></h2>
+<h3 id="constructor"><a class="header" href="#constructor">constructor</a></h3>
+<pre><code class="language-solidity">constructor(string memory name, string memory symbol) ERC20(name, symbol);
+</code></pre>
+<h3 id="mint"><a class="header" href="#mint">mint</a></h3>
+<pre><code class="language-solidity">function mint(address account, uint256 amount) public;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sdg"><a class="header" href="#sdg">SDG</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/SDG.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/SDG.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 <a href="src/SDG.sol//src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></p>
 <p><strong>Author:</strong>
@@ -483,8 +1230,8 @@ Requirements:</p>
 <h3 id="_decayperiod"><a class="header" href="#_decayperiod">_decayPeriod</a></h3>
 <pre><code class="language-solidity">uint32 private _decayPeriod;
 </code></pre>
-<h2 id="functions-3"><a class="header" href="#functions-3">Functions</a></h2>
-<h3 id="stableperiod-1"><a class="header" href="#stableperiod-1">stablePeriod</a></h3>
+<h2 id="functions-5"><a class="header" href="#functions-5">Functions</a></h2>
+<h3 id="stableperiod-2"><a class="header" href="#stableperiod-2">stablePeriod</a></h3>
 <p><em>Returns the duration of the stable period in days.</em></p>
 <pre><code class="language-solidity">function stablePeriod() public view virtual returns (uint256);
 </code></pre>
@@ -493,7 +1240,7 @@ Requirements:</p>
 <tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The duration of the stable period in days.</td></tr>
 </tbody></table>
 </div>
-<h3 id="decayperiod-1"><a class="header" href="#decayperiod-1">decayPeriod</a></h3>
+<h3 id="decayperiod-2"><a class="header" href="#decayperiod-2">decayPeriod</a></h3>
 <p><em>Returns the duration of the decay period in days.</em></p>
 <pre><code class="language-solidity">function decayPeriod() public view virtual returns (uint256);
 </code></pre>
@@ -543,7 +1290,7 @@ Requirements:</p>
 <tr><td><code>decayPeriod_</code></td><td><code>uint32</code></td><td>The new decay period duration in days</td></tr>
 </tbody></table>
 </div>
-<h3 id="balanceof"><a class="header" href="#balanceof">balanceOf</a></h3>
+<h3 id="balanceof-1"><a class="header" href="#balanceof-1">balanceOf</a></h3>
 <p><em>Returns the balance of the account with decay applied.</em></p>
 <pre><code class="language-solidity">function balanceOf(address account) public view virtual returns (uint256);
 </code></pre>
@@ -556,51 +1303,98 @@ Requirements:</p>
 <div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
 <tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The current balance with decay applied</td></tr>
 </tbody></table>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="treasury-1"><a class="header" href="#treasury-1">Treasury</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/Treasury.sol">Git Source</a></p>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="treasury"><a class="header" href="#treasury">Treasury</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/Treasury.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 ERC20, <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></p>
+<p>Implementation of a single-asset treasury that manages deposits and withdrawals</p>
+<p><em>This contract extends ERC20 to implement a treasury system for a single underlying asset</em></p>
 <h2 id="state-variables-1"><a class="header" href="#state-variables-1">State Variables</a></h2>
 <h3 id="_asset"><a class="header" href="#_asset">_asset</a></h3>
-<p><em>The underlying token used for the Vault.</em></p>
+<p><em>The single underlying asset token managed by this treasury</em></p>
 <pre><code class="language-solidity">IERC20 private immutable _asset;
 </code></pre>
 <h3 id="_valocracy"><a class="header" href="#_valocracy">_valocracy</a></h3>
-<p><em>The Valocracy contract.</em></p>
+<p><em>The Valocracy contract address that controls deposits</em></p>
 <pre><code class="language-solidity">address private _valocracy;
 </code></pre>
-<h2 id="functions-4"><a class="header" href="#functions-4">Functions</a></h2>
-<h3 id="constructor"><a class="header" href="#constructor">constructor</a></h3>
+<h2 id="functions-6"><a class="header" href="#functions-6">Functions</a></h2>
+<h3 id="constructor-1"><a class="header" href="#constructor-1">constructor</a></h3>
 <p><em>Initializes the contract by setting a <code>name</code> and a <code>symbol</code>
-for the fungible token. Also sets the Valocracy contract and the
-underlying asset token.</em></p>
+for the treasury shares. Also sets the Valocracy contract and the
+single underlying asset token.</em></p>
 <pre><code class="language-solidity">constructor(IERC20 asset_, address valocracy, string memory name, string memory symbol) ERC20(name, symbol);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>asset_</code></td><td><code>IERC20</code></td><td>The single underlying asset token to be managed</td></tr>
+<tr><td><code>valocracy</code></td><td><code>address</code></td><td>The address of the Valocracy contract that controls deposits</td></tr>
+<tr><td><code>name</code></td><td><code>string</code></td><td>The name of the treasury shares</td></tr>
+<tr><td><code>symbol</code></td><td><code>string</code></td><td>The symbol of the treasury shares</td></tr>
+</tbody></table>
+</div>
 <h3 id="asset-1"><a class="header" href="#asset-1">asset</a></h3>
-<p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#asset">IERC4626-asset</a>.</em></p>
+<p><em>Returns the address of the single underlying asset token.</em></p>
 <pre><code class="language-solidity">function asset() public view virtual returns (address);
 </code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>address</code></td><td>The address of the asset token</td></tr>
+</tbody></table>
+</div>
 <h3 id="totalassets-1"><a class="header" href="#totalassets-1">totalAssets</a></h3>
-<p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#totalassets">IERC4626-totalAssets</a>.</em></p>
+<p><em>Returns the total amount of the single asset held by the treasury.</em></p>
 <pre><code class="language-solidity">function totalAssets() public view virtual returns (uint256);
 </code></pre>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The total balance of the underlying asset</td></tr>
+</tbody></table>
+</div>
 <h3 id="previewwithdraw-1"><a class="header" href="#previewwithdraw-1">previewWithdraw</a></h3>
-<p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#previewwithdraw">IERC4626-previewWithdraw</a>.</em></p>
-<p><em>Calculates the amount of assets that would be returned for burning the given amount of shares.
+<p><em>Calculates the amount of the underlying asset that would be returned for burning the given amount of shares.
 The calculation is based on the proportion of total assets to total shares.
 For example, if there are 2000 assets and 1000 shares, each share represents 2 assets.</em></p>
 <pre><code class="language-solidity">function previewWithdraw(uint256 shares) public view virtual returns (uint256);
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to calculate assets for</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The amount of the underlying asset that would be returned</td></tr>
+</tbody></table>
+</div>
 <h3 id="deposit-2"><a class="header" href="#deposit-2">deposit</a></h3>
-<p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#deposit">IERC4626-deposit</a>.</em></p>
+<p><em>Deposits the underlying asset into the treasury and mints shares to the receiver.
+Only callable by the Valocracy contract.</em></p>
 <pre><code class="language-solidity">function deposit(address receiver, uint256 shares) public;
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that will receive the shares</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to mint</td></tr>
+</tbody></table>
+</div>
 <h3 id="withdraw-2"><a class="header" href="#withdraw-2">withdraw</a></h3>
-<p><em>See <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html#withdraw">IERC4626-withdraw</a>.</em></p>
+<p><em>Withdraws the underlying asset from the treasury by burning shares.
+Transfers the corresponding amount of the underlying asset to the receiver.</em></p>
 <pre><code class="language-solidity">function withdraw(address receiver, uint256 shares) public;
 </code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The address that will receive the underlying asset</td></tr>
+<tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to burn</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="tokensoulbound-1"><a class="header" href="#tokensoulbound-1">TokenSoulbound</a></h1>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/Valocracy.sol">Git Source</a></p>
+<p><em>Error thrown when attempting to transfer a soulbound token</em></p>
+<pre><code class="language-solidity">error TokenSoulbound();
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="valocracy-1"><a class="header" href="#valocracy-1">Valocracy</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/264de7209f25edf5c05064dcd62712db60d4d460/src/Valocracy.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/Valocracy.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 ERC20Votes, Ownable, <a href="src/Valocracy.sol//src/SDG.sol/abstract.SDG.html">SDG</a></p>
 <p>Implementation of the EIP-7787 Soulbound Degradable Governance standard using ERC20 tokens</p>
@@ -614,8 +1408,8 @@ ERC20Votes, Ownable, <a href="src/Valocracy.sol//src/SDG.sol/abstract.SDG.html">
 <p><em>Mapping from accounts addresses to their last participation timestamp</em></p>
 <pre><code class="language-solidity">mapping(address =&gt; uint32) private _lastParticipation;
 </code></pre>
-<h2 id="functions-5"><a class="header" href="#functions-5">Functions</a></h2>
-<h3 id="constructor-1"><a class="header" href="#constructor-1">constructor</a></h3>
+<h2 id="functions-7"><a class="header" href="#functions-7">Functions</a></h2>
+<h3 id="constructor-2"><a class="header" href="#constructor-2">constructor</a></h3>
 <p><em>Initializes the contract by setting a <code>name</code> and a <code>symbol</code>.
 Sets default stable and decay periods to 90 days each.</em></p>
 <pre><code class="language-solidity">constructor(string memory name, string memory symbol)
@@ -656,7 +1450,7 @@ Only allows minting and burning, prevents transfers between accounts.</em></p>
 <tr><td><code>value</code></td><td><code>uint256</code></td><td>The amount of tokens</td></tr>
 </tbody></table>
 </div>
-<h3 id="balanceof-1"><a class="header" href="#balanceof-1">balanceOf</a></h3>
+<h3 id="balanceof-2"><a class="header" href="#balanceof-2">balanceOf</a></h3>
 <p>*Returns the balance of <code>account</code> with decay applied.
 Implements the EIP-7787 decay mechanism:</p>
 <ul>
@@ -690,7 +1484,7 @@ Implements the EIP-7787 decay mechanism:</p>
 <tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The current voting units</td></tr>
 </tbody></table>
 </div>
-<h3 id="grantvotingunits"><a class="header" href="#grantvotingunits">grantVotingUnits</a></h3>
+<h3 id="grantvotingunits-1"><a class="header" href="#grantvotingunits-1">grantVotingUnits</a></h3>
 <p><em>Grants voting units to the specified account by <code>amount</code>.
 Only the contract owner can mint new tokens and grant additional voting units.
 Updates the last participation timestamp to start the stable period.</em></p>
@@ -710,333 +1504,7 @@ Updates the last participation timestamp to start the stable period.</em></p>
 <div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
 <tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens to burn</td></tr>
 </tbody></table>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="testing-documentation"><a class="header" href="#testing-documentation">Testing Documentation</a></h1>
-<p>This section contains detailed documentation about the test coverage and missing's test scenarios for the Valocracy contracts.</p>
-<h2 id="contents-1"><a class="header" href="#contents-1">Contents</a></h2>
-<ul>
-<li><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a> - Comprehensive overview of test coverage for the Treasury contract</li>
-<li><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a> - Additional test scenarios and recommended test cases</li>
-<li><a href="testing/ValocracyTestCoverage.html">Valocracy Test Coverage</a> - Comprehensive overview of test coverage for the Valocracy contract</li>
-<li><a href="testing/ValocracyTestScenarios.html">Valocracy Test Scenarios</a> - Additional test scenarios and recommended test cases</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="treasury-test-coverage"><a class="header" href="#treasury-test-coverage">Treasury Test Coverage</a></h1>
-<p>What Has Been Tested:</p>
-<ul>
-<li><input disabled="" type="checkbox" checked=""/>
-Basic economic functionalities</li>
-</ul>
-<h2 id="economic-functionalities"><a class="header" href="#economic-functionalities">ECONOMIC FUNCTIONALITIES</a></h2>
-<h3 id="1-basic-contract-setup-"><a class="header" href="#1-basic-contract-setup-">1. Basic Contract Setup ✅</a></h3>
-<ul>
-<li>Contract deployment with correct parameters</li>
-<li>Token name and symbol verification</li>
-<li>Asset and valocracy address assignment</li>
-</ul>
-<h3 id="2-asset-management-"><a class="header" href="#2-asset-management-">2. Asset Management ✅</a></h3>
-<ul>
-<li>Total assets calculation</li>
-<li>Share-to-asset conversion</li>
-<li>Asset balance tracking</li>
-<li>Asset transfers</li>
-</ul>
-<h3 id="3-share-operations-"><a class="header" href="#3-share-operations-">3. Share Operations ✅</a></h3>
-<ul>
-<li>Share minting (only by authorized address)</li>
-<li>Share burning</li>
-<li>Share distribution</li>
-<li>Share calculations</li>
-</ul>
-<h3 id="4-access-control-"><a class="header" href="#4-access-control-">4. Access Control ✅</a></h3>
-<ul>
-<li>Authorization checks for deposits</li>
-<li>Unauthorized access prevention</li>
-<li>Withdrawal permissions</li>
-</ul>
-<h3 id="5-events-"><a class="header" href="#5-events-">5. Events ✅</a></h3>
-<ul>
-<li>Deposit event emission</li>
-<li>Withdraw event emission</li>
-<li>Event parameter verification</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="additional-test-scenarios"><a class="header" href="#additional-test-scenarios">Additional Test Scenarios</a></h2>
-<ol>
-<li>
-<p><strong>Asset Ratio Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test share-to-asset ratio consistency</li>
-<li><input disabled="" type="checkbox"/>
-Verify ratio calculations after multiple deposits</li>
-<li><input disabled="" type="checkbox"/>
-Check ratio accuracy after withdrawals</li>
-<li><input disabled="" type="checkbox"/>
-Validate ratio maintenance during external transfers</li>
-</ul>
-</li>
-<li>
-<p><strong>Edge Cases</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test with maximum uint256 values</li>
-<li><input disabled="" type="checkbox"/>
-Verify behavior with zero amount deposits</li>
-<li><input disabled="" type="checkbox"/>
-Check handling of dust amounts</li>
-<li><input disabled="" type="checkbox"/>
-Test with different decimal places in asset token</li>
-</ul>
-</li>
-<li>
-<p><strong>Multiple User Scenarios</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test concurrent deposits from multiple users</li>
-<li><input disabled="" type="checkbox"/>
-Verify share distribution accuracy</li>
-<li><input disabled="" type="checkbox"/>
-Check withdrawal queue handling</li>
-<li><input disabled="" type="checkbox"/>
-Test multiple simultaneous withdrawals</li>
-</ul>
-</li>
-<li>
-<p><strong>Asset Price Impact</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test share price calculation accuracy</li>
-<li><input disabled="" type="checkbox"/>
-Verify price impact from large deposits</li>
-<li><input disabled="" type="checkbox"/>
-Check price stability during withdrawals</li>
-<li><input disabled="" type="checkbox"/>
-Validate price calculations with varying asset amounts</li>
-</ul>
-</li>
-<li>
-<p><strong>Security Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test reentrancy protection</li>
-<li><input disabled="" type="checkbox"/>
-Verify access control boundaries</li>
-<li><input disabled="" type="checkbox"/>
-Check overflow/underflow protection</li>
-<li><input disabled="" type="checkbox"/>
-Validate emergency pause functionality</li>
-</ul>
-</li>
-<li>
-<p><strong>Fee Management Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test fee calculation accuracy</li>
-<li><input disabled="" type="checkbox"/>
-Verify fee collection mechanisms</li>
-<li><input disabled="" type="checkbox"/>
-Check fee distribution to stakeholders</li>
-<li><input disabled="" type="checkbox"/>
-Validate fee adjustments and updates</li>
-<li><input disabled="" type="checkbox"/>
-Test different fee types and their interactions</li>
-</ul>
-</li>
-<li>
-<p><strong>Asset Strategy Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test different asset allocation strategies</li>
-<li><input disabled="" type="checkbox"/>
-Verify strategy execution and performance</li>
-<li><input disabled="" type="checkbox"/>
-Check strategy rebalancing mechanisms</li>
-<li><input disabled="" type="checkbox"/>
-Validate strategy risk management</li>
-<li><input disabled="" type="checkbox"/>
-Test strategy adaptation to market conditions</li>
-</ul>
-</li>
-<li>
-<p><strong>Treasury Manager Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test manager permission boundaries</li>
-<li><input disabled="" type="checkbox"/>
-Verify manager action validations</li>
-<li><input disabled="" type="checkbox"/>
-Check manager role limitations</li>
-<li><input disabled="" type="checkbox"/>
-Validate manager decision execution</li>
-<li><input disabled="" type="checkbox"/>
-Test manager accountability mechanisms</li>
-</ul>
-</li>
-</ol>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="valocracy-test-coverage"><a class="header" href="#valocracy-test-coverage">Valocracy Test Coverage</a></h1>
-<p>What Has Been Tested:</p>
-<ul>
-<li><input disabled="" type="checkbox" checked=""/>
-Basic token functionalities</li>
-<li><input disabled="" type="checkbox" checked=""/>
-Governance mechanics</li>
-<li><input disabled="" type="checkbox" checked=""/>
-Time-based decay system</li>
-</ul>
-<h2 id="token-functionalities"><a class="header" href="#token-functionalities">TOKEN FUNCTIONALITIES</a></h2>
-<h3 id="1-basic-contract-setup--1"><a class="header" href="#1-basic-contract-setup--1">1. Basic Contract Setup ✅</a></h3>
-<ul>
-<li>Contract deployment with correct parameters</li>
-<li>Token name and symbol verification</li>
-<li>Owner address assignment</li>
-<li>Initial supply verification</li>
-</ul>
-<h3 id="2-token-properties-"><a class="header" href="#2-token-properties-">2. Token Properties ✅</a></h3>
-<ul>
-<li>ERC20 standard compliance</li>
-<li>Decimals verification</li>
-<li>Total supply tracking</li>
-<li>Balance tracking</li>
-</ul>
-<h3 id="3-soulbound-mechanism-"><a class="header" href="#3-soulbound-mechanism-">3. Soulbound Mechanism ✅</a></h3>
-<ul>
-<li>Transfer prevention</li>
-<li>Balance immutability</li>
-<li>Unauthorized transfer attempts</li>
-</ul>
-<h3 id="4-voting-units-management-"><a class="header" href="#4-voting-units-management-">4. Voting Units Management ✅</a></h3>
-<ul>
-<li>Granting voting units</li>
-<li>Burning voting units</li>
-<li>Balance updates</li>
-<li>Owner-only restrictions</li>
-</ul>
-<h3 id="5-time-based-mechanics-"><a class="header" href="#5-time-based-mechanics-">5. Time-Based Mechanics ✅</a></h3>
-<ul>
-<li>Stable period verification</li>
-<li>Decay period calculations</li>
-<li>Balance decay over time</li>
-<li>Period reset on new contributions</li>
-</ul>
-<h3 id="6-access-control-"><a class="header" href="#6-access-control-">6. Access Control ✅</a></h3>
-<ul>
-<li>Owner-only function restrictions</li>
-<li>Unauthorized access prevention</li>
-<li>Permission validation</li>
-</ul>
-<h3 id="7-events-"><a class="header" href="#7-events-">7. Events ✅</a></h3>
-<ul>
-<li>Transfer event emission</li>
-<li>Event parameter verification </li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="additional-test-scenarios-1"><a class="header" href="#additional-test-scenarios-1">Additional Test Scenarios</a></h2>
-<ol>
-<li>
-<p><strong>Time-Based Decay Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test precise decay calculations at different time intervals</li>
-<li><input disabled="" type="checkbox"/>
-Verify decay behavior with multiple voting unit grants</li>
-<li><input disabled="" type="checkbox"/>
-Check decay accuracy during period transitions</li>
-<li><input disabled="" type="checkbox"/>
-Validate decay calculations with different initial amounts</li>
-</ul>
-</li>
-<li>
-<p><strong>Edge Cases</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test with maximum uint256 values</li>
-<li><input disabled="" type="checkbox"/>
-Verify behavior with zero amount grants</li>
-<li><input disabled="" type="checkbox"/>
-Check handling of dust amounts</li>
-<li><input disabled="" type="checkbox"/>
-Test with different time granularities</li>
-</ul>
-</li>
-<li>
-<p><strong>Multiple User Scenarios</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test concurrent voting unit grants to multiple users</li>
-<li><input disabled="" type="checkbox"/>
-Verify balance tracking across multiple users</li>
-<li><input disabled="" type="checkbox"/>
-Check decay calculations for multiple users</li>
-<li><input disabled="" type="checkbox"/>
-Test simultaneous burns from different users</li>
-</ul>
-</li>
-<li>
-<p><strong>Governance Impact</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test voting power calculation accuracy</li>
-<li><input disabled="" type="checkbox"/>
-Verify voting power decay over time</li>
-<li><input disabled="" type="checkbox"/>
-Check voting power stability during stable period</li>
-<li><input disabled="" type="checkbox"/>
-Validate voting power calculations with varying amounts</li>
-</ul>
-</li>
-<li>
-<p><strong>Security Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test reentrancy protection</li>
-<li><input disabled="" type="checkbox"/>
-Verify access control boundaries</li>
-<li><input disabled="" type="checkbox"/>
-Check overflow/underflow protection</li>
-<li><input disabled="" type="checkbox"/>
-Validate emergency pause functionality</li>
-</ul>
-</li>
-<li>
-<p><strong>Period Management Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test period transition accuracy</li>
-<li><input disabled="" type="checkbox"/>
-Verify period reset mechanisms</li>
-<li><input disabled="" type="checkbox"/>
-Check period calculations with different timeframes</li>
-<li><input disabled="" type="checkbox"/>
-Validate period maintenance during upgrades</li>
-</ul>
-</li>
-<li>
-<p><strong>Integration Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test interaction with governance contracts</li>
-<li><input disabled="" type="checkbox"/>
-Verify integration with voting systems</li>
-<li><input disabled="" type="checkbox"/>
-Check compatibility with other protocols</li>
-<li><input disabled="" type="checkbox"/>
-Validate cross-contract communication</li>
-</ul>
-</li>
-<li>
-<p><strong>Upgrade Tests</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Test upgrade mechanisms</li>
-<li><input disabled="" type="checkbox"/>
-Verify state preservation during upgrades</li>
-<li><input disabled="" type="checkbox"/>
-Check backward compatibility</li>
-<li><input disabled="" type="checkbox"/>
-Validate upgrade authorization</li>
-<li><input disabled="" type="checkbox"/>
-Test upgrade rollback scenarios </li>
-</ul>
-</li>
-</ol>
-
+</div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
