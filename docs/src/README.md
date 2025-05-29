@@ -1,38 +1,66 @@
-# Valocracy
+## Foundry
 
-Valocracy is a governance model designed to replace plutocracy with a system that allocates influence based on contributions and merit rather than wealth. The core concept is that participants earn influence (voting power) in proportion to the value they create for the community. Influence is non-transferable, ensuring that governance reflects active contribution rather than token accumulation.
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-## Key Concepts
+Foundry consists of:
 
-- **Valuation over Capital**: Voting power is tied to reputation or contribution scores, not tokens.
-- **Soulbound Rights**: Influence is non-transferable and earned individually.
-- **Multi-Stakeholder Alignment**: Designed to align the incentives of builders, users, and funders.
-- **Transparent Contribution Records**: Contributions are logged and assessed by peers or through algorithms.
-- **Decentralized Reputation System**: Participants build up their score through verifiable actions.
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Architecture Components
+## Documentation
 
-### 1. Contributor Registry (Soulbound Identity)
+https://book.getfoundry.sh/
 
-- Each participant has a non-transferable identity (e.g., NFT or soulbound token).
-- Used to track all contributions and voting rights.
-- [ ] Implement ERC20Votes as soulbound token and include NFT Metadata to be compatible with ERC721 Interface.
-- [ ] Function getVotes() should return the number of votes the holder has.
+## Usage
 
-### 2. Contribution Tracking Module
+### Build
 
-- [ ] Discuss and define how the mint process will work. Ownable/AcessControl/Gov/Multisig.
-- [ ] Discuss the best way to track contributions. Considering the new changes to the ERC20Votes instead of cumulative NFTs.
-- [ ] Shares are minted to the contributor's wallet address when they submit a contribution and get verified or we mint and they can claim it?
+```shell
+$ forge build
+```
 
-### 3. Valocracy Voting System
+### Test
 
-- Voting weight = Curve calculation based on decay.
+```shell
+$ forge test
+```
 
-### 4. Treasury and Share Management
+### Format
 
-- Treasury manages the economic power of the system through shares.
-- Shares represent proportional ownership of the treasury's assets.
-- Treasury has one underlying asset.
-- [ ] Implement share price calculation mechanism
-- [ ] Create emergency pause functionality
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```

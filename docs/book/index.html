@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html" class="active">Home</a></li><li class="chapter-item "><a href="src/IDNFT.sol/abstract.IDNFT.html">IDNFT</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/interfaces/IIDNFT.sol/interface.IIDNFT.html">IIDNFT</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html" class="active">Home</a></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="testing/index.html">❱ testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="testing/TreasuryTestCoverage.html">Treasury Test Coverage</a></li><li class="chapter-item "><a href="testing/TreasuryTestScenarios.html">Treasury Test Scenarios</a></li><li class="chapter-item "><a href="testing/ValocracyTestCoverage.html">Valocracy Test Coverage</a></li><li class="chapter-item "><a href="testing/ValocracyTestScenarios.html">Valocracy Test Scenarios</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -179,56 +179,51 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="valocracy"><a class="header" href="#valocracy">Valocracy</a></h1>
-<p>Valocracy is a governance model designed to replace plutocracy with a system that allocates influence based on contributions and merit rather than wealth. The core concept is that participants earn influence (voting power) in proportion to the value they create for the community. Influence is non-transferable, ensuring that governance reflects active contribution rather than token accumulation.</p>
-<h2 id="key-concepts"><a class="header" href="#key-concepts">Key Concepts</a></h2>
+                        <h2 id="foundry"><a class="header" href="#foundry">Foundry</a></h2>
+<p><strong>Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.</strong></p>
+<p>Foundry consists of:</p>
 <ul>
-<li><strong>Valuation over Capital</strong>: Voting power is tied to reputation or contribution scores, not tokens.</li>
-<li><strong>Soulbound Rights</strong>: Influence is non-transferable and earned individually.</li>
-<li><strong>Multi-Stakeholder Alignment</strong>: Designed to align the incentives of builders, users, and funders.</li>
-<li><strong>Transparent Contribution Records</strong>: Contributions are logged and assessed by peers or through algorithms.</li>
-<li><strong>Decentralized Reputation System</strong>: Participants build up their score through verifiable actions.</li>
+<li><strong>Forge</strong>: Ethereum testing framework (like Truffle, Hardhat and DappTools).</li>
+<li><strong>Cast</strong>: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.</li>
+<li><strong>Anvil</strong>: Local Ethereum node, akin to Ganache, Hardhat Network.</li>
+<li><strong>Chisel</strong>: Fast, utilitarian, and verbose solidity REPL.</li>
 </ul>
-<h2 id="architecture-components"><a class="header" href="#architecture-components">Architecture Components</a></h2>
-<h3 id="1-contributor-registry-soulbound-identity"><a class="header" href="#1-contributor-registry-soulbound-identity">1. Contributor Registry (Soulbound Identity)</a></h3>
-<ul>
-<li>Each participant has a non-transferable identity (e.g., NFT or soulbound token).</li>
-<li>Used to track all contributions and voting rights.</li>
-<li><input disabled="" type="checkbox"/>
-Implement ERC20Votes as soulbound token and include NFT Metadata to be compatible with ERC721 Interface.</li>
-<li><input disabled="" type="checkbox"/>
-Function getVotes() should return the number of votes the holder has.</li>
-</ul>
-<h3 id="2-contribution-tracking-module"><a class="header" href="#2-contribution-tracking-module">2. Contribution Tracking Module</a></h3>
-<ul>
-<li><input disabled="" type="checkbox"/>
-Discuss and define how the mint process will work. Ownable/AcessControl/Gov/Multisig.</li>
-<li><input disabled="" type="checkbox"/>
-Discuss the best way to track contributions. Considering the new changes to the ERC20Votes instead of cumulative NFTs.</li>
-<li><input disabled="" type="checkbox"/>
-Shares are minted to the contributor's wallet address when they submit a contribution and get verified or we mint and they can claim it?</li>
-</ul>
-<h3 id="3-valocracy-voting-system"><a class="header" href="#3-valocracy-voting-system">3. Valocracy Voting System</a></h3>
-<ul>
-<li>Voting weight = Curve calculation based on decay.</li>
-</ul>
-<h3 id="4-treasury-and-share-management"><a class="header" href="#4-treasury-and-share-management">4. Treasury and Share Management</a></h3>
-<ul>
-<li>Treasury manages the economic power of the system through shares.</li>
-<li>Shares represent proportional ownership of the treasury's assets.</li>
-<li>Treasury has one underlying asset.</li>
-<li><input disabled="" type="checkbox"/>
-Implement share price calculation mechanism</li>
-<li><input disabled="" type="checkbox"/>
-Create emergency pause functionality</li>
-</ul>
+<h2 id="documentation"><a class="header" href="#documentation">Documentation</a></h2>
+<p>https://book.getfoundry.sh/</p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<h3 id="build"><a class="header" href="#build">Build</a></h3>
+<pre><code class="language-shell">$ forge build
+</code></pre>
+<h3 id="test"><a class="header" href="#test">Test</a></h3>
+<pre><code class="language-shell">$ forge test
+</code></pre>
+<h3 id="format"><a class="header" href="#format">Format</a></h3>
+<pre><code class="language-shell">$ forge fmt
+</code></pre>
+<h3 id="gas-snapshots"><a class="header" href="#gas-snapshots">Gas Snapshots</a></h3>
+<pre><code class="language-shell">$ forge snapshot
+</code></pre>
+<h3 id="anvil"><a class="header" href="#anvil">Anvil</a></h3>
+<pre><code class="language-shell">$ anvil
+</code></pre>
+<h3 id="deploy"><a class="header" href="#deploy">Deploy</a></h3>
+<pre><code class="language-shell">$ forge script script/Counter.s.sol:CounterScript --rpc-url &lt;your_rpc_url&gt; --private-key &lt;your_private_key&gt;
+</code></pre>
+<h3 id="cast"><a class="header" href="#cast">Cast</a></h3>
+<pre><code class="language-shell">$ cast &lt;subcommand&gt;
+</code></pre>
+<h3 id="help"><a class="header" href="#help">Help</a></h3>
+<pre><code class="language-shell">$ forge --help
+$ anvil --help
+$ cast --help
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next prefetch" href="src/IDNFT.sol/abstract.IDNFT.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="src/SDG.sol/abstract.SDG.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -239,7 +234,7 @@ Create emergency pause functionality</li>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next prefetch" href="src/IDNFT.sol/abstract.IDNFT.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="src/SDG.sol/abstract.SDG.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -1,5 +1,5 @@
 # ITreasury
-[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/3c1bb3a5dbf1b0852bacbc7957066c674b876a74/src/interfaces/ITreasury.sol)
+[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/cc23733bef36f5764ced212bbe0dc6dc3badbf1c/src/interfaces/ITreasury.sol)
 
 
 ## Functions
