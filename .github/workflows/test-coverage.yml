@@ -31,10 +31,13 @@ jobs:
           forge install foundry-rs/forge-std
           forge build
 
+      - name: Install lcov
+        run: sudo apt-get install -y lcov
+
       - name: Run Tests with Coverage
         run: |
           forge coverage --report lcov
-          genhtml lcov.info -o docs/coverage
+          genhtml lcov.info -o gh-pages/coverage
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
