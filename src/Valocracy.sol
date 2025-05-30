@@ -7,9 +7,6 @@ import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {EIP712} from "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
 import {SDG} from "./SDG.sol";
 
-/// @dev Error thrown when attempting to transfer a soulbound token
-error TokenSoulbound();
-
 /// @title Valocracy
 /// @notice Implementation of the EIP-7787 Soulbound Degradable Governance standard using ERC20 tokens
 /// @dev This contract extends ERC20Votes to implement non-transferable tokens with decaying voting power

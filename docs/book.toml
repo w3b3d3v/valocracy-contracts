@@ -1,11 +1,6 @@
 [book]
 src = "src"
 title = ""
-exclude = [
-    "src/math",
-    "src/mocks",
-    "src/Valocracy.sol/error.TokenSoulbound.md"
-]
 
 [output.html]
 no-section-label = true

@@ -1,6 +1,5 @@
 # Summary
 - [Home](README.md)
-# src
   - [❱ interfaces](src/interfaces/README.md)
     - [IERC7787](src/interfaces/IERC7787.sol/interface.IERC7787.md)
     - [ITreasury](src/interfaces/ITreasury.sol/interface.ITreasury.md)

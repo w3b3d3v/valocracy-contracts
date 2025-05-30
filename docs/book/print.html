@@ -92,7 +92,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></li><li class="chapter-item "><a href="src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></li><li class="chapter-item "><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li></ol></li><li class="chapter-item "><a href="src/SDG.sol/abstract.SDG.html">SDG</a></li><li class="chapter-item "><a href="src/Treasury.sol/contract.Treasury.html">Treasury</a></li><li class="chapter-item "><a href="src/Valocracy.sol/contract.Valocracy.html">Valocracy</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -222,7 +222,7 @@
 <li><a href="src/interfaces/IValocracy.sol/interface.IValocracy.html">IValocracy</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ierc7787"><a class="header" href="#ierc7787">IERC7787</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/fce5a03f1cbd831476693115e6be83e2d3ede859/src/interfaces/IERC7787.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/6795bd08475b218679f757729c7ba8112cd3b440/src/interfaces/IERC7787.sol">Git Source</a></p>
 <h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
 <h3 id="stableperiod"><a class="header" href="#stableperiod">stablePeriod</a></h3>
 <p><em>Returns the grace period duration before the voting units begins decaying. This period is
@@ -248,8 +248,13 @@ period is fixed to 90 days. But it can be overridden in derived contracts.</em><
 <p><em>Returns the raw last participation timestamp of an account without any decay adjustments.</em></p>
 <pre><code class="language-solidity">function accountStats(address account) external view returns (uint32);
 </code></pre>
+<h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
+<h3 id="tokensoulbound"><a class="header" href="#tokensoulbound">TokenSoulbound</a></h3>
+<p><em>Error thrown when attempting to transfer a soulbound token</em></p>
+<pre><code class="language-solidity">error TokenSoulbound();
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="itreasury"><a class="header" href="#itreasury">ITreasury</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/fce5a03f1cbd831476693115e6be83e2d3ede859/src/interfaces/ITreasury.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/6795bd08475b218679f757729c7ba8112cd3b440/src/interfaces/ITreasury.sol">Git Source</a></p>
 <h2 id="functions-1"><a class="header" href="#functions-1">Functions</a></h2>
 <h3 id="asset"><a class="header" href="#asset">asset</a></h3>
 <p><em>Returns the address of the single underlying asset token used by the treasury
@@ -330,13 +335,13 @@ Transfers the corresponding amount of the underlying asset to the receiver.</em>
 <tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares burned</td></tr>
 </tbody></table>
 </div>
-<h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
+<h2 id="errors-1"><a class="header" href="#errors-1">Errors</a></h2>
 <h3 id="notauthorized"><a class="header" href="#notauthorized">NotAuthorized</a></h3>
 <p><em>Emitted when a non-authorized account attempts to call a function.</em></p>
 <pre><code class="language-solidity">error NotAuthorized(address caller);
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ivalocracy"><a class="header" href="#ivalocracy">IValocracy</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/fce5a03f1cbd831476693115e6be83e2d3ede859/src/interfaces/IValocracy.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/6795bd08475b218679f757729c7ba8112cd3b440/src/interfaces/IValocracy.sol">Git Source</a></p>
 <h2 id="functions-2"><a class="header" href="#functions-2">Functions</a></h2>
 <h3 id="balanceof"><a class="header" href="#balanceof">balanceOf</a></h3>
 <p>*Returns the balance of an account with decay applied.
@@ -418,13 +423,13 @@ Updates the last participation timestamp to start the stable period.</em></p>
 <tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of voting units burned</td></tr>
 </tbody></table>
 </div>
-<h2 id="errors-1"><a class="header" href="#errors-1">Errors</a></h2>
-<h3 id="tokensoulbound"><a class="header" href="#tokensoulbound">TokenSoulbound</a></h3>
+<h2 id="errors-2"><a class="header" href="#errors-2">Errors</a></h2>
+<h3 id="tokensoulbound-1"><a class="header" href="#tokensoulbound-1">TokenSoulbound</a></h3>
 <p><em>Emitted when attempting to transfer a soulbound token.</em></p>
 <pre><code class="language-solidity">error TokenSoulbound();
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sdg"><a class="header" href="#sdg">SDG</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/fce5a03f1cbd831476693115e6be83e2d3ede859/src/SDG.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/6795bd08475b218679f757729c7ba8112cd3b440/src/SDG.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 <a href="src/SDG.sol//src/interfaces/IERC7787.sol/interface.IERC7787.html">IERC7787</a></p>
 <p><strong>Author:</strong>
@@ -541,7 +546,7 @@ Requirements:</p>
 <tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The current balance with decay applied</td></tr>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="treasury"><a class="header" href="#treasury">Treasury</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/fce5a03f1cbd831476693115e6be83e2d3ede859/src/Treasury.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/6795bd08475b218679f757729c7ba8112cd3b440/src/Treasury.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 ERC20, <a href="src/Treasury.sol//src/interfaces/ITreasury.sol/interface.ITreasury.html">ITreasury</a></p>
 <p>Implementation of a single-asset treasury that manages deposits and withdrawals</p>
@@ -626,7 +631,7 @@ Transfers the corresponding amount of the underlying asset to the receiver.</em>
 <tr><td><code>shares</code></td><td><code>uint256</code></td><td>The amount of shares to burn</td></tr>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="valocracy-1"><a class="header" href="#valocracy-1">Valocracy</a></h1>
-<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/fce5a03f1cbd831476693115e6be83e2d3ede859/src/Valocracy.sol">Git Source</a></p>
+<p><a href="https://github.com/w3b3d3v/valocracy-contracts/blob/6795bd08475b218679f757729c7ba8112cd3b440/src/Valocracy.sol">Git Source</a></p>
 <p><strong>Inherits:</strong>
 ERC20Votes, Ownable, <a href="src/Valocracy.sol//src/SDG.sol/abstract.SDG.html">SDG</a></p>
 <p>Implementation of the EIP-7787 Soulbound Degradable Governance standard using ERC20 tokens</p>

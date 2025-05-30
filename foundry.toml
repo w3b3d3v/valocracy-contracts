@@ -7,9 +7,8 @@ libs = ["lib"]
 [doc]
 # Ignore specific patterns using glob patterns
 ignore = [
-    "**/mocks/**",
-    "**/math/**",
-    "**/*.TokenSoulbound.md"
+    "./src/math/*",
+    "./src/mocks/*",
 ]
 # Remove src prefix from paths
 strip_prefix = "src/"

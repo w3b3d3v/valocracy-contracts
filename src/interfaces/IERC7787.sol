@@ -29,4 +29,9 @@ interface IERC7787 {
      * @dev Returns the raw last participation timestamp of an account without any decay adjustments.
      */
    function accountStats(address account) external view returns (uint32);
+
+  /**
+   * @dev Error thrown when attempting to transfer a soulbound token
+   */
+  error TokenSoulbound();
 }

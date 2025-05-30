@@ -39,10 +39,8 @@ jobs:
       - name: Build Forge Documentation
         run: forge doc
 
-      - name: Clean Documentation
-        run: |
-          chmod +x clean-docs.sh
-          ./clean-docs.sh
+      - name: Build mdBook Documentation
+        run: mdbook build docs
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
