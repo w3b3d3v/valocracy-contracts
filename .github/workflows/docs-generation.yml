@@ -1,4 +1,4 @@
-name: Documentation
+name: Documentation and Coverage
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   docs:
-    name: Build Documentation
+    name: Build Documentation and Coverage
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -48,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/book
+          path: combined-docs
 
       - name: Deploy to GitHub Pages
         id: deployment
