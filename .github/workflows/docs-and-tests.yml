@@ -16,7 +16,8 @@ jobs:
       - name: Install Foundry
         run: |
           curl -L https://foundry.paradigm.xyz | bash
-          $HOME/.foundry/bin/foundryup
+          source $HOME/.bashrc
+          foundryup
 
       - name: Run Forge Tests
         run: forge test
@@ -30,7 +31,8 @@ jobs:
       - name: Install Foundry
         run: |
           curl -L https://foundry.paradigm.xyz | bash
-          $HOME/.foundry/bin/foundryup
+          source $HOME/.bashrc
+          foundryup
 
       - name: Install mdBook
         run: |
