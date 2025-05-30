@@ -1,5 +1,5 @@
 # SafeCast
-[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/math/SafeCast.sol)
+[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/fce5a03f1cbd831476693115e6be83e2d3ede859/src/math/SafeCast.sol)
 
 *Wrappers over Solidity's uintXX/intXX casting operators with added overflow
 checks.
@@ -935,5 +935,12 @@ _Available since v3.0._*
 
 ```solidity
 function toInt256(uint256 value) internal pure returns (int256);
+```
+
+### test
+
+
+```solidity
+function test() public;
 ```
 

@@ -1,5 +1,5 @@
 # IValocracy
-[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/8f30a41cc9c475ea6fc31243e7a7c57bf134b82e/src/interfaces/IValocracy.sol)
+[Git Source](https://github.com/w3b3d3v/valocracy-contracts/blob/fce5a03f1cbd831476693115e6be83e2d3ede859/src/interfaces/IValocracy.sol)
 
 
 ## Functions

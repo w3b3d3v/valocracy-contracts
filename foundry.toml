@@ -3,3 +3,13 @@ src = "src"
 out = "out"
 libs = ["lib"]
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+[doc]
+# Ignore specific patterns using glob patterns
+ignore = [
+    "**/mocks/**",
+    "**/math/**",
+    "**/*.TokenSoulbound.md"
+]
+# Remove src prefix from paths
+strip_prefix = "src/"

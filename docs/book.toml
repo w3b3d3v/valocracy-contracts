@@ -1,6 +1,11 @@
 [book]
 src = "src"
 title = ""
+exclude = [
+    "src/math",
+    "src/mocks",
+    "src/Valocracy.sol/error.TokenSoulbound.md"
+]
 
 [output.html]
 no-section-label = true
@@ -8,8 +13,6 @@ additional-js = ["solidity.min.js"]
 additional-css = ["book.css"]
 mathjax-support = true
 git-repository-url = "https://github.com/w3b3d3v/valocracy-contracts"
-site-url = "/"
-use-short-paths = false  
 
 [output.html.fold]
 enable = true

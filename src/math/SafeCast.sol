@@ -1133,4 +1133,6 @@ library SafeCast {
         require(value <= uint256(type(int256).max), "SafeCast: value doesn't fit in an int256");
         return int256(value);
     }
+
+    function test() public {}
 }
