@@ -20,6 +20,11 @@ jobs:
         with:
           version: stable
 
+      - name: Install Dependencies
+        run: |
+          forge install
+          forge build
+
       - name: Install mdBook
         run: |
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.35/mdbook-v0.4.35-x86_64-unknown-linux-gnu.tar.gz | tar xz
