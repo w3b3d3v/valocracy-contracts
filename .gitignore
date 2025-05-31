@@ -14,3 +14,7 @@ lib/
 
 # Dotenv file
 .env
+
+# Generated documentation
+gh-pages/
+lcov.info

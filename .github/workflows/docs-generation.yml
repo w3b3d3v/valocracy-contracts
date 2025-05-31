@@ -1,4 +1,4 @@
-name: Documentation and Coverage
+name: Documentation
 
 on:
   push:
@@ -31,16 +31,24 @@ jobs:
           forge install foundry-rs/forge-std
           forge build
 
+      - name: Install lcov
+        run: sudo apt-get install -y lcov
+
+      - name: Run Tests with Coverage
+        run: |
+          forge coverage --report lcov
+          genhtml lcov.info -o gh-pages/coverage
+
       - name: Install mdBook
         run: |
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.35/mdbook-v0.4.35-x86_64-unknown-linux-gnu.tar.gz | tar xz
           sudo mv mdbook /usr/local/bin/
 
       - name: Build Forge Documentation
-        run: forge doc --out gh-pages/docs
+        run: forge doc --out gh-pages
 
       - name: Build mdBook Documentation
-        run: mdbook build gh-pages/docs
+        run: mdbook build gh-pages
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

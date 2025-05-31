@@ -1,0 +1,31 @@
+name: Test and Coverage
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test-coverage:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: stable
+
+      - name: Install Dependencies
+        run: |
+          forge install OpenZeppelin/openzeppelin-contracts
+          forge install foundry-rs/forge-std
+          forge build
+
+      - name: Run Tests
+        run: forge test 

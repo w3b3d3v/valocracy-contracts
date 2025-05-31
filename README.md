@@ -24,6 +24,11 @@ The project consists of several core smart contracts:
 - **SDG.sol**: Implements the [IERC7787](https://eips.ethereum.org/EIPS/eip-7787) for Soulbound Degradable Governance
 - **Interfaces/**: Contains the core interfaces for the system
 
+## Documentation and Coverage
+
+- **Smart Contract Documentation**: Detailed documentation of our smart contracts can be found at [https://resources.valocracy.xyz/book/](https://resources.valocracy.xyz/book/)
+- **Test Coverage**: View our test coverage reports at [https://resources.valocracy.xyz/coverage/](https://resources.valocracy.xyz/coverage/src/src)
+
 ## Learn More
 
 For a deeper understanding of Valocracy's principles and vision, please read our [Manifesto](https://valocracy.xyz/en/read-the-manifesto).
